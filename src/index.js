@@ -6,11 +6,11 @@ const { dirname } = require('path')
 const app = express()
 const port = 3000
 
-const route=require('./routes');
+const route=require('./routes')
 const db=require('./config/db')
 
 // connect db
-db.connect();
+db.connect()
 
  app.use(express.static(path.join(__dirname,'public')))
 // console.log("PATH", path.join(__dirname, 'public'))
