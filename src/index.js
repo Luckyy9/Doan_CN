@@ -13,6 +13,7 @@ const db=require('./config/db')
 db.connect()
 
  app.use(express.static(path.join(__dirname,'public')))
+//  app.use( express.static(path.join(__dirname, 'img')))
 // console.log("PATH", path.join(__dirname, 'public'))
  
 app.use(express.urlencoded({
@@ -27,7 +28,7 @@ app.use(morgan('combined'))
 }))
 app.set('view engine','hbs')
 // set view handlebar
-app.set('views',path.join(__dirname,'resources/views'))
+ app.set('views',path.join(__dirname,'resources','views'))
 // console.log('PATH:', path.join(__dirname,'resources/views'))
 
 // tao route duong dan
@@ -36,5 +37,5 @@ app.set('views',path.join(__dirname,'resources/views'))
 
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`App listening at http://localhost:${port}`)
 })
