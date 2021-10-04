@@ -3,8 +3,7 @@ const router= express.Router();
 
 const homeController= require('../app/controler/HomeController')
 
-
-router.use('/', homeController.home)
+router.get('/', homeController.home)
 
 
 module.exports=router;
