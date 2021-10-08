@@ -1,16 +1,22 @@
-const Slide=require('../models/Slide')
-const { mutipleMongooseToObject}= require('../../util/mogoose')
+const Slide = require('../models/Slide');
+const {mogooseToObject}= require('../../util/mogoose');
+const Course = require('../models/Course');
 
 
 class HomeController{
-    home(rep, res, next){
-        Slide.find({})
-        .then(slides => {  
-         res.render('home',{
-             sildes: mutipleMongooseToObject(slides)
-           })
-        }) 
-        .catch(next)
-       }  
-    }            
-moudel.exports=new HomeController;
+    home(rep, res,next){
+        
+    // get /new
+    Slide.findOne({})
+    .then(slide => {  
+     res.render('home',{                
+         slide: mogooseToObject(slide)
+       })
+    })
+    .catch(next)
+
+   }
+    
+    } 
+module.exports=new HomeController;
+
