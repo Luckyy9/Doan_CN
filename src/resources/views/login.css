@@ -1,0 +1,182 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body
+{
+    background-image:url("bgr_login.jpg");
+    background-repeat: no-repeat;   
+    margin: 0 auto; /*canh bố cục đều 2 bên*/
+    padding: 0; 
+}
+.wrap
+{
+    float: left; /* canh div từ trái sang */
+    width: 50%;
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 350px;     
+    border-radius:30px;
+}
+
+main{
+    background-color: white;
+    min-height: 620px;
+    padding: 7.5px 15px;
+    border-radius:50px;
+}
+footer{
+    background-color: #cccccc;
+    min-height: 70px;
+    padding: 15px;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.login-form{
+    width: 100%;
+    max-width: 600px;
+    height: 550px;
+    margin: 20px auto;
+    margin-top: 30px;
+    background-color: #ffffff;
+    padding: 15px;
+    border: 2px dotted #cccccc;
+    border-radius: 10px;
+}
+h1{
+    color: #009999;
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    
+}
+h3{
+    color: #009999;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: 150px;
+}
+.input-box{
+    margin-bottom: 10px;
+    text-align: center;
+}
+.input-box input{
+    padding: 7.5px 15px;
+    width: 50%;
+    border: 1px solid #cccccc;
+    outline: none;   
+}
+ .check{
+     text-align: left;
+     margin-left: 150px;
+ }
+.btn-box{
+    text-align: right;
+    margin-top: 30px;
+    font-weight: 600;
+}
+.btn-box button{
+    padding: 7.5px 15px;
+    border-radius: 2px;
+    background-color: #009999;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+.btn-back{
+    text-align: left;
+    margin-top: -30px;
+}
+.btn-box button:hover {
+    background-color: crimson;
+    color: white;
+}
+.btn-back button {
+    background-color:#009999;
+    border: none;
+    color: white;
+    padding: 7.5px 15px;
+    padding-left: 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 2px 2px;
+    cursor: pointer;
+    width: 90px; 
+    font-weight: 600;
+}
+.button:hover {
+    background-color: crimson;
+    color: white;
+}
+
+.box-2{
+    margin-top: 15px;
+    text-align:center;
+    position: relative;
+}
+.button_fb{
+    padding: 11px 70px;
+    border: 2px solid #dce0e3;
+    border-radius: 18px;
+    background-color: white;
+    font-weight: 500;
+}
+.button_gm{
+    padding: 11px 83px;
+    margin-top: 10px;
+    border: 2px solid #dce0e3;
+    border-radius: 18px;
+    background-color: white;
+    font-weight: 500;
+}
+
+.box-2 i{
+    margin-top: -20px;   
+}
+.box-2 p{
+    color: #009999;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.box-2 a{
+    margin-top: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #35414c;    
+}
+.box-2 i:hover{
+    cursor: pointer;
+    color: rgb(30, 30, 202);
+    background-color: white;
+}
+.button_gm:hover{
+    background-color:#dce0e3;
+}
+.button_fb:hover{
+    background-color:#dce0e3;
+}
+.register{    
+    margin-top: 15px;
+    text-align: center;    
+}
+.register p{
+    text-align: center;
+}
+.register a{
+    text-decoration: none;
+    color: red;
+    font-weight: 600;
+}
