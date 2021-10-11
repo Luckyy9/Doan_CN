@@ -1,11 +1,13 @@
 
-
 class LoginController{
     login(rep, res){
         
-    // get /new
-     res.render('login');
+    // get /login
+    res.render('login')
     
-    }
-}   
-module.exports=new LoginController;
+
+   }
+    
+    } 
+module.exports= new LoginController;
+
