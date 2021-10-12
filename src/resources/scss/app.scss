@@ -1,4 +1,5 @@
 @import 'variable';
+@import 'login';
 *{
     padding: 0;
     margin: 0;
@@ -24,7 +25,7 @@ a{
     text-decoration: none;
 
 }
-a:hover{
+ a:hover{
     color: #000;
     opacity: 90%;
     font-size: 18px;
@@ -36,7 +37,6 @@ a:hover{
 
 // Header
 #header{
-    overflow: hidden;
     width: 100%;
     height: 65px;
     position: fixed;
@@ -79,17 +79,34 @@ a:hover{
     margin-left: 20px;
     font-size: 20px;
 }
-#header .header-login{
-    float: left;
-    font-weight: bold;
-    margin-top: 10px;
-    font-size: 20px;
-}
-#header .icon-user{
+.icon-user{
     float: right;
     margin-right: 32px;
     margin-top:18px;
     font-size: 24px;
+}
+.subnav-login{
+    right: 0px;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 10px;
+}
+#header .subnav-login a{
+    color: black;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: normal;
+    display: block;
+}
+#header .subnav-login a:hover{
+    background-color: #ddd;
+    border-radius: 10px;
+}
+.show{
+    display: block;
 }
 #header .icon-bell{
     float: right;
@@ -120,7 +137,8 @@ a:hover{
 
 .container{
     max-width: 100%;
-    padding: 65px 16px 0px;
+    margin: 65px 16px 0px;
+    display: block;
 }
 .sidebar-left{
     width: 110px;
@@ -144,7 +162,7 @@ a:hover{
 
 }
 
-// sidebar responsive
+// sidebar-home responsive
 
 @media screen and (max-width:600px) {
     .sidebar-left{
@@ -157,4 +175,53 @@ a:hover{
     
 }
 
-// login logout
+// slides-home
+
+.mySlides {
+    display: none;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  margin-right: 32px;
+  position: relative;
+  margin-left: 110px;
+  padding-top: 20px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 4px $shadow-color;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+  
+.mySlides img{
+    width: 100%;
+    height: 330px;
+    border-radius: 20px;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
