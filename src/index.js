@@ -13,9 +13,7 @@ const db=require('./config/db')
 db.connect()
 
  app.use(express.static(path.join(__dirname,'public')))
-//  app.use( express.static(path.join(__dirname, 'img')))
-// console.log("PATH", path.join(__dirname, 'public'))
- 
+
 app.use(express.urlencoded({
   extended:true
 }));
@@ -23,7 +21,7 @@ app.use(express.json());
 // xu ly from submit
 app.use(morgan('combined'))
 // templete engie
-           app.engine('hbs',handlebars({
+app.engine('hbs',handlebars({
   extname: '.hbs'
 }))
 app.set('view engine','hbs')
