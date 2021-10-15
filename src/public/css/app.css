@@ -1,4 +1,91 @@
+<<<<<<< HEAD
 @import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+=======
+#container-login a {
+  color: #fff; }
+
+#container-login a:hover {
+  color: #fff; }
+
+#container-login {
+  display: flex;
+  flex-direction: column;
+  margin: 12px auto;
+  max-width: 660px;
+  min-width: 600px; }
+
+#container-login h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 10px 0px 10px; }
+
+button.btn.btn-primary.btn-login {
+  font-weight: bolder; }
+
+.btn, .btn-login {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none;
+  text-align: center; }
+
+#container-login p {
+  text-align: center;
+  margin-top: 12px;
+  font-weight: bolder; }
+
+.btn:hover {
+  opacity: 1; }
+
+.fb {
+  background-color: #3B5998;
+  color: white; }
+
+.google {
+  background-color: #dd4b39;
+  color: white; }
+
+.bg-video-lession {
+  width: 240px;
+  height: 120px; }
+
+.sidebar-lession {
+  width: 300px;
+  height: 540px;
+  position: fixed;
+  z-index: 1;
+  background-color: #dce0e3;
+  right: 0px; }
+
+.header-sidebar-lession {
+  box-shadow: 5px 0px 4px #fff; }
+
+.header-sidebar-lession .content-header-lession {
+  font-size: 24px;
+  font-weight: bolder;
+  text-align: center;
+  margin: 0px auto 4px; }
+
+.header-sidebar-lession .title-lession {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center; }
+
+.bg-green {
+  background-color: #02FA72;
+  position: absolute;
+  width: 90px;
+  height: 65px;
+  opacity: 70%; }
+
+>>>>>>> 000079028270d763fc4491233b8ba804673ba238
 * {
   padding: 0;
   margin: 0;
@@ -28,7 +115,6 @@ a:hover {
   text-decoration: none; }
 
 #header {
-  overflow: hidden;
   width: 100%;
   height: 65px;
   position: fixed;
@@ -36,6 +122,7 @@ a:hover {
   left: 0px;
   right: 0px;
   z-index: 1;
+  background-color: #fff;
   box-shadow: 0px 1px 4px #ccc; }
 
 #header .img-logo {
@@ -69,11 +156,34 @@ a:hover {
   margin-left: 20px;
   font-size: 20px; }
 
-#header .icon-user {
+.icon-user {
   float: right;
   margin-right: 32px;
   margin-top: 18px;
   font-size: 24px; }
+
+.subnav-login {
+  right: 0px;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 10px; }
+
+#header .subnav-login a {
+  color: black;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: normal;
+  display: block; }
+
+#header .subnav-login a:hover {
+  background-color: #ddd;
+  border-radius: 10px; }
+
+.show {
+  display: block; }
 
 #header .icon-bell {
   float: right;
@@ -104,7 +214,9 @@ a:hover {
   position: fixed;
   float: left;
   margin-top: 16px;
-  left: 5px; }
+  left: 5px;
+  background-color: #fff;
+  z-index: 1; }
 
 .sidebar-left a {
   display: flex;
@@ -129,6 +241,7 @@ a:hover {
   display: none; }
 
 .slideshow-container {
+  margin-top: 65px;
   margin-right: 32px;
   position: relative;
   margin-left: 110px;
@@ -245,3 +358,54 @@ footer .end {
     opacity: .4; }
   to {
     opacity: 1; } }
+
+/* Course item */
+.bg-color-violet {
+  background: linear-gradient(to bottom right, #6631FF 0%, #A431FF 30%, #FF44F8 70%, #EE89FF 100%); }
+
+.bg-color-blue {
+  background: linear-gradient(to bottom left, #236AF2 0%, #34ECE1 40%, #54DEE7 60%, #B6FF7C 90%); }
+
+.bg-color-origin {
+  background: linear-gradient(to top right, #C800FA 0%, #FF7C1D 30%, #FF7D54 70%, #FFDE89 100%); }
+
+.bg-color-pink {
+  background: linear-gradient(to top right, #FFEC41 0%, #DE08A2 40%, #FF73AE 80%, #FFCEF1 100%); }
+
+.item-course {
+  position: absolute;
+  width: 309px;
+  height: 181px;
+  border-radius: 20px; }
+
+.icon-course {
+  position: absolute;
+  width: 164px;
+  height: 120px;
+  border-radius: 20px 0px 100px;
+  background-color: #fff;
+  opacity: 15%; }
+
+.icon-course-left {
+  position: absolute;
+  font-size: 100px;
+  color: #000;
+  opacity: 30%;
+  margin-top: 5px;
+  margin-left: 12px; }
+
+.content-course {
+  width: 160px;
+  font-size: 32px;
+  font-weight: bolder;
+  color: #fff;
+  margin-top: 50px;
+  margin-left: 120px;
+  text-align: center; }
+
+.link-course {
+  text-align: center;
+  font-size: 12px;
+  position: relative;
+  color: #fff;
+  font-weight: lighter; }

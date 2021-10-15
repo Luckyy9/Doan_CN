@@ -1,0 +1,34 @@
+.bg-video-lession{
+    width: 240px;
+    height: 120px;
+}
+.sidebar-lession{
+    width: 300px;
+    height: 540px;
+    position: fixed;
+    z-index: 1;
+    background-color: $shadow-color;
+    right: 0px;
+}
+.header-sidebar-lession{
+    box-shadow: 5px 0px 4px #fff;
+}
+
+.header-sidebar-lession .content-header-lession{
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 0px auto 4px;
+}
+.header-sidebar-lession .title-lession{
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+.bg-green{
+    background-color: #02FA72;
+    position: absolute;
+    width: 90px;
+    height: 65px;
+    opacity: 70%;
+}

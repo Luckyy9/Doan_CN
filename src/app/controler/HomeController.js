@@ -1,20 +1,13 @@
-const Slide = require('../models/Slide');
-const {mogooseToObject}= require('../../util/mogoose');
+
+const {mogooseToObject}= require('../../util/mongoose');
 const Course = require('../models/Course');
 
 
 class HomeController{
     home(rep, res,next){
         
-    // get /new
-    Slide.findOne({})
-    .then(slide => {  
-     res.render('home',{                
-         slide: mogooseToObject(slide)
-       })
-    })
-    .catch(next)
-
+    // get /home
+   res.render('home')
    }
     
     } 
