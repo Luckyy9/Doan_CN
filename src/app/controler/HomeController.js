@@ -1,15 +1,9 @@
 
-const {mogooseToObject}= require('../../util/mongoose');
-const Course = require('../models/Course');
-
-
 class HomeController{
-    home(rep, res,next){
-        
-    // get /home
-   res.render('home')
-   }
+    home(rep, res){
     
-    } 
-module.exports=new HomeController;
-
+         res.render('home')
+             
+       }  
+    }            
+moudel.exports=new HomeController;
