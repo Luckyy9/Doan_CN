@@ -1,9 +1,12 @@
 
 class HomeController{
-    home(rep, res){
-    
-         res.render('home')
-             
-       }  
-    }            
-moudel.exports=new HomeController;
+  home(rep, res){
+      
+  // get /home
+  res.render('home')
+  
+
+ }
+  
+  } 
+module.exports= new HomeController;

@@ -1,0 +1,49 @@
+.container-footer{
+    position: relative;
+    margin-left: 100px;
+    margin-top: 20px;
+    background-color: #ccc;
+}
+.footer-content{
+    position: relative;
+    display: flex;
+}
+.first-items-footer{
+    position: relative;
+    max-width: 35%;
+    margin-right: 5px;
+}
+.first-content-footer{
+    margin: 5px 0px 5px 2px;
+}
+.social-footer i{
+    position: relative;
+    font-size: 24px;
+    margin-right: 5px;
+}
+.items-footer{
+    position: relative;
+    max-width: 20%;
+    margin: 0px 5px 0px 2px;
+    min-width: 19%;
+}
+.items-footer li{
+    list-style-type: none;
+}
+.items-footer h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+.items-footer a{
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 80%;
+}
+.items-footer a:hover{
+    opacity: 1 !important;
+}
+.end-footer{
+    position: relative;
+    text-align: center;
+    margin: 0px;
+}
