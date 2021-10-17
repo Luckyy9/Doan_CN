@@ -9,4 +9,31 @@
        </div>
         <i class="fas fa-user-circle icon-user"></i>
         <i class="fas fa-bell icon-bell"></i>  
+          <i onclick="Mylogin()" class=" fas fa-user icon-user"></i>
+            <div id="subnavlogin" class="subnav-login" >
+                <a href="login">Đăng nhập</a>
+                <a href="#">Thông tin</a>
+                <a href="#">Đăng xuất</a>
+            </div>
+          <i class="fas fa-bell icon-bell"></i>  
 </div>
+<script>
+ //nhan lan dau mo, nhan lan 2 dong
+   function Mylogin() {
+  document.getElementById("subnavlogin").classList.toggle("show");
+}
+
+//nhan vao ben ngoai dong
+window.onclick = function(event) {
+  if (!event.target.matches('.icon-user')) {
+    var dropdowns = document.getElementsByClassName("subnav-login");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>

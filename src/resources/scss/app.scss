@@ -1,6 +1,11 @@
 @import 'variable';
+
 @import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 //import 'footer';
+
+@import 'login';
+@import 'lession';
+
 *{
     padding: 0;
     margin: 0;
@@ -26,7 +31,7 @@ a{
     text-decoration: none;
 
 }
-a:hover{
+ a:hover{
     color: #000;
     opacity: 90%;
     font-size: 18px;
@@ -38,7 +43,6 @@ a:hover{
 
 // Header
 #header{
-    overflow: hidden;
     width: 100%;
     height: 65px;
     position: fixed;
@@ -46,6 +50,7 @@ a:hover{
     left: 0px;
     right: 0px;
     z-index: 1;
+    background-color: #fff;
     box-shadow: 0px 1px 4px #ccc;
 }
 
@@ -81,17 +86,34 @@ a:hover{
     margin-left: 20px;
     font-size: 20px;
 }
-#header .header-login{
-    float: left;
-    font-weight: bold;
-    margin-top: 10px;
-    font-size: 20px;
-}
-#header .icon-user{
+.icon-user{
     float: right;
     margin-right: 32px;
     margin-top:18px;
     font-size: 24px;
+}
+.subnav-login{
+    right: 0px;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 10px;
+}
+#header .subnav-login a{
+    color: black;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: normal;
+    display: block;
+}
+#header .subnav-login a:hover{
+    background-color: #ddd;
+    border-radius: 10px;
+}
+.show{
+    display: block;
 }
 #header .icon-bell{
     float: right;
@@ -132,6 +154,8 @@ a:hover{
     float: left;
     margin-top: 16px;
     left: 5px;
+    background-color: #fff;
+    z-index: 1;
 }
 .sidebar-left a{
     display: flex;
@@ -169,6 +193,7 @@ a:hover{
 
 //Slideshow container 
 .slideshow-container {
+  margin-top: 65px;
   margin-right: 32px;
   position: relative;
   margin-left: 110px;
@@ -291,3 +316,55 @@ footer .end{
   to {opacity: 1}
 }
 
+/* Course item */
+.bg-color-violet{
+    background: linear-gradient(to bottom right, #6631FF 0%, #A431FF 30%,#FF44F8 70%, #EE89FF 100%)
+}
+.bg-color-blue{
+    background: linear-gradient(to bottom left, #236AF2 0%, #34ECE1 40%,#54DEE7 60%, #B6FF7C 90%)
+}
+.bg-color-origin{
+    background: linear-gradient(to top right, #C800FA 0%, #FF7C1D 30%,#FF7D54 70%, #FFDE89 100%)
+}
+.bg-color-pink{
+    background: linear-gradient(to top right, #FFEC41 0%, #DE08A2 40%,#FF73AE 80%, #FFCEF1 100%)
+}
+
+.item-course{
+    position: absolute;
+    width: 309px;
+    height: 181px;
+    border-radius: 20px;
+  }
+.icon-course{
+    position: absolute;
+    width: 164px;
+    height: 120px;
+    border-radius: 20px 0px 100px;
+    background-color: #fff;
+    opacity: 15%;
+}
+.icon-course-left{
+    position: absolute;
+    font-size: 100px;
+    color: #000;
+    opacity: 30%;
+    margin-top: 5px;
+    margin-left: 12px;
+}
+.content-course{
+    width: 160px;
+    font-size: 32px;
+    font-weight: bolder;
+    color: #fff;
+    margin-top: 50px;
+    margin-left: 120px;
+    text-align: center;
+}
+.link-course{
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    font-weight: lighter;
+}
