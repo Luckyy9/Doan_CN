@@ -1,6 +1,61 @@
-<<<<<<< HEAD
-@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
-=======
+footer {
+  background-color: #212121;
+  padding: 50px 20px;
+  margin: 0 0 100px; }
+
+footer .container {
+  width: 100px;
+  max-width: 1100px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 0 100px; }
+
+footer .ftr h3 {
+  font-size: 1.4em;
+  margin-bottom: 1.2em;
+  color: #fff; }
+
+.first-items-footer {
+  position: relative;
+  max-width: 35%;
+  margin-right: 5px; }
+
+.first-content-footer {
+  margin: 5px 0px 5px 2px; }
+
+.social-footer i {
+  position: relative;
+  font-size: 24px;
+  margin-right: 5px; }
+
+.items-footer {
+  position: relative;
+  max-width: 20%;
+  margin: 0px 5px 0px 2px;
+  min-width: 19%; }
+
+.items-footer li {
+  list-style-type: none; }
+
+.items-footer h3 {
+  font-size: 18px;
+  font-weight: bold; }
+
+.items-footer a {
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 80%; }
+
+.items-footer a:hover {
+  opacity: 1 !important; }
+
+.end-footer {
+  position: relative;
+  text-align: center;
+  margin: 0px; }
+
 #container-login a {
   color: #fff; }
 
@@ -167,7 +222,6 @@ button.btn.btn-primary.btn-login {
   margin-top: 12px;
   margin-left: 50%; }
 
->>>>>>> 4d2158c2230a06f00f79509d7f276b338e93a511
 * {
   padding: 0;
   margin: 0;
@@ -191,9 +245,7 @@ a {
 
 a:hover {
   color: #000;
-  opacity: 90%;
-  font-size: 18px;
-  font-weight: bold;
+  opacity: 80%;
   text-decoration: none; }
 
 #header {
@@ -291,11 +343,10 @@ a:hover {
   display: block; }
 
 .sidebar-left {
-  width: 110px;
+  width: 92px;
   height: 100%;
   position: fixed;
   float: left;
-  margin-top: 16px;
   left: 5px;
   background-color: #fff;
   z-index: 1; }
@@ -303,14 +354,15 @@ a:hover {
 .sidebar-left a {
   display: flex;
   width: 100%;
-  height: 92px;
-  border: 1px soid #dce0e3;
+  height: 65px;
   border-radius: 16px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   box-shadow: 2px 2px 7px #dce0e3;
-  margin-top: 4px; }
+  margin-top: 4px;
+  font-size: 16px;
+  font-weight: 500; }
 
 @media screen and (max-width: 600px) {
   .sidebar-left {
@@ -319,129 +371,103 @@ a:hover {
     font-size: 12px;
     height: 62px; } }
 
-.mySlides {
-  display: none; }
+.slider {
+  width: 1200px;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 100px; }
 
-.slideshow-container {
-  margin-top: 65px;
-  margin-right: 32px;
-  position: relative;
-  margin-left: 110px;
-  padding-top: 20px;
-  border-radius: 20px;
-  box-shadow: 2px 2px 4px #dce0e3; }
-
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease; }
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s; }
-
-.mySlides img {
-  width: 100%;
-  height: 330px;
-  border-radius: 20px; }
-
-footer {
-  background: #222;
-  color: #fff;
-  padding: 60px 0; }
-
-.container {
-  width: 100%;
-  max-width: 1100px;
-  padding: 0 20px;
-  margin: 0 auto; }
-
-li {
-  list-style: none;
-  line-height: 2; }
-
-a {
-  text-decoration: none;
-  color: #ccc; }
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap; }
-
-.items {
-  flex-basis: 20%; }
-
-.items .logo {
-  text-transform: capitalize;
-  font-size: 1.4em;
-  color: #b6b6b6; }
-
-.items p {
-  margin: 1.2em 0; }
-
-.social {
+.slides {
+  width: 500%;
+  height: 250px;
   display: flex; }
 
-.social a {
-  height: 30px;
-  width: 30px;
-  background: #383535;
-  border-radius: 5px;
-  margin: 10px 5px;
-  text-align: center; }
+.slides input {
+  display: none; }
 
-.social a i {
-  font-size: 1.3em;
-  line-height: 30px; }
+.slide {
+  width: 20%;
+  transition: 2s; }
 
-.items h3 {
-  position: relative;
-  font-size: 1.3em;
-  margin-bottom: 1rem;
-  color: aliceblue; }
+.slide img {
+  width: 1200px;
+  height: 250px; }
 
-.items h3::after {
-  content: "";
+/*css for manual slide navigation*/
+.navigation-manual {
   position: absolute;
-  width: 40px;
-  height: 3px;
-  background: #fff;
-  bottom: -4px;
-  left: 0; }
+  width: 1200px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center; }
 
-hr {
-  opacity: .3; }
+.manual-btn {
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s; }
 
-footer .end {
-  text-align: center;
-  padding: 20px 0 0 0; }
+.manual-btn:not(:last-child) {
+  margin-right: 40px; }
 
-@media (max-width: 640px) {
-  .items {
-    flex-basis: 80%;
-    margin: auto; } }
+.manual-btn:hover {
+  background: #40D3DC; }
 
-@-webkit-keyframes fade {
-  from {
-    opacity: .4; }
-  to {
-    opacity: 1; } }
+#radio1:checked ~ .first {
+  margin-left: 0; }
 
-@keyframes fade {
-  from {
-    opacity: .4; }
-  to {
-    opacity: 1; } }
+#radio2:checked ~ .first {
+  margin-left: -20%; }
 
-/* Course item */
+#radio3:checked ~ .first {
+  margin-left: -40%; }
+
+#radio4:checked ~ .first {
+  margin-left: -60%; }
+
+/*css for automatic navigation*/
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 1200px;
+  justify-content: center;
+  margin-top: 210px; }
+
+.navigation-auto div {
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s; }
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px; }
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: #40D3DC; }
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: #40D3DC; }
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: #40D3DC; }
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: #40D3DC; }
+
+.home-content {
+  margin-left: 100px; }
+
+.slogan-home {
+  position: relative;
+  margin-top: 12px;
+  font-size: 20px;
+  max-width: 600px; }
+
+.slogan-home .name-slogan-home {
+  font-weight: bold; }
+
 .bg-color-violet {
   background: linear-gradient(to bottom right, #6631FF 0%, #A431FF 30%, #FF44F8 70%, #EE89FF 100%); }
 
@@ -454,11 +480,62 @@ footer .end {
 .bg-color-pink {
   background: linear-gradient(to top right, #FFEC41 0%, #DE08A2 40%, #FF73AE 80%, #FFCEF1 100%); }
 
+.course-home {
+  position: relative; }
+
+.header-course-home {
+  position: relative;
+  margin-top: 32px; }
+
+.name-course-home {
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 0px; }
+
+.icon-users {
+  position: relative;
+  opacity: 70%; }
+
+.member-course-home {
+  margin-top: -13px;
+  font-size: 12px;
+  font-weight: 600;
+  position: relative;
+  margin-left: 25px;
+  opacity: 70%; }
+
+.list-course-home {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  max-width: 900px;
+  overflow: scroll; }
+
 .item-course {
-  position: absolute;
+  position: relative;
   width: 309px;
   height: 181px;
-  border-radius: 20px; }
+  border-radius: 20px;
+  margin-right: 20px; }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px; }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px; }
+
+::-webkit-scrollbar-track {
+  border-radius: 10px; }
+
+::-webkit-scrollbar-thumb {
+  background: #dce0e3;
+  border-radius: 10px; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333; }
 
 .icon-course {
   position: absolute;
@@ -481,7 +558,7 @@ footer .end {
   font-size: 32px;
   font-weight: bolder;
   color: #fff;
-  margin-top: 50px;
+  padding-top: 48px;
   margin-left: 120px;
   text-align: center; }
 
@@ -491,3 +568,52 @@ footer .end {
   position: relative;
   color: #fff;
   font-weight: lighter; }
+
+.layout-course .footer-course {
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+  margin-left: 12px;
+  margin-bottom: 0px; }
+
+.list-news-home {
+  position: relative;
+  margin-top: 20px; }
+
+.list-news-home .layout-news {
+  display: flex;
+  margin-top: 12px;
+  max-width: 280px; }
+
+.img-news-home {
+  width: 280px;
+  height: 130px;
+  border-radius: 20px;
+  position: relative;
+  margin-right: 20px; }
+
+.title-news-home {
+  margin: 5px 0px 2px 5px;
+  position: relative;
+  font-size: 18px;
+  font-weight: 600; }
+
+.content-news-home {
+  position: relative;
+  margin: 0px 0px 8px 5px;
+  font-size: 14px;
+  font-weight: lighter; }
+
+.footer-news-home {
+  position: relative;
+  display: flex;
+  margin-top: 12px;
+  margin-bottom: 10px; }
+
+.icon-like, .icon-comment, .icon-share {
+  margin: 0px 32px 0px 5px;
+  display: inline-flex;
+  opacity: 70%; }
+
+.number-icon-news {
+  margin-left: 4px; }
