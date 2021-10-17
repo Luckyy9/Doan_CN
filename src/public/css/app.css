@@ -1,3 +1,54 @@
+.container-footer {
+  position: relative;
+  margin-left: 100px;
+  margin-top: 20px;
+  background-color: #ccc;
+  bottom: 0px; }
+
+.footer-content {
+  position: relative;
+  display: flex;
+  padding-top: 12px; }
+
+.first-items-footer {
+  position: relative;
+  max-width: 35%;
+  margin-right: 12px; }
+
+.first-content-footer {
+  margin: 5px 0px 5px 2px; }
+
+.social-footer i {
+  position: relative;
+  font-size: 24px;
+  margin-left: 12px; }
+
+.items-footer {
+  position: relative;
+  max-width: 20%;
+  margin: 0px 5px 0px 2px;
+  min-width: 19%; }
+
+.items-footer li {
+  list-style-type: none; }
+
+.items-footer h3 {
+  font-size: 18px;
+  font-weight: bold; }
+
+.items-footer a {
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 80%; }
+
+.items-footer a:hover {
+  opacity: 1 !important; }
+
+.end-footer {
+  position: relative;
+  text-align: center;
+  margin: 0px; }
+
 #container-login a,
 #container-register a {
   color: #fff; }
@@ -64,14 +115,14 @@ button.btn.btn-primary.btn-login {
   margin-left: 5px; }
 
 .bg-video-lession {
-  width: 680px;
+  width: 900px;
   margin-left: -25px;
   margin-right: 12px; }
 
 .sidebar-lession {
   position: relative;
   float: right;
-  width: 345px;
+  width: 400px;
   height: 100%;
   background-color: #fff;
   right: 0px;
@@ -82,13 +133,14 @@ button.btn.btn-primary.btn-login {
   position: relative;
   background-color: #ccc;
   border-radius: 5px;
-  margin-bottom: 12px; }
+  margin-bottom: 12px;
+  height: 100px; }
 
 .header-sidebar-lession .content-header-lession {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bolder;
   text-align: center;
-  margin: 0px auto 4px; }
+  margin: auto; }
 
 .header-sidebar-lession .title-lession {
   font-size: 16px;
@@ -100,7 +152,7 @@ button.btn.btn-primary.btn-login {
   background-color: #fff;
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 300px;
+  height: 400px;
   border-radius: 10px;
   margin-top: 20px; }
 
@@ -128,14 +180,14 @@ button.btn.btn-primary.btn-login {
   background: linear-gradient(to bottom, #34ECE1 0%, #236AF2 20%, #236AF2 80%, #34ECE1 100%); }
 
 .bg-lession {
-  width: 310px;
-  height: 54px;
+  width: 380px;
+  height: 62px;
   border-radius: 10px;
   margin: 4px auto 12px;
   position: relative; }
 
 .name-lession {
-  font-size: 20px;
+  font-size: 24px;
   color: #fff;
   font-weight: 600;
   position: absolute;
@@ -148,7 +200,7 @@ button.btn.btn-primary.btn-login {
   border-radius: 10px;
   position: absolute;
   right: 12px;
-  margin-top: 3px; }
+  margin-top: 5px; }
 
 .bg-lession .icon-medal {
   position: absolute;
@@ -174,8 +226,8 @@ button.btn.btn-primary.btn-login {
   margin-top: 35px; }
 
 .layout-icon-lession {
-  height: 54px;
-  width: 320px;
+  height: 62px;
+  width: 380px;
   border-radius: 10px;
   position: absolute; }
 
@@ -185,57 +237,6 @@ button.btn.btn-primary.btn-login {
   opacity: 50%;
   margin-top: 12px;
   margin-left: 45%; }
-
-.container-footer {
-  position: relative;
-  margin-left: 100px;
-  margin-top: 20px;
-  background-color: #ccc;
-  bottom: 0px; }
-
-.footer-content {
-  position: relative;
-  display: flex;
-  padding-top: 12px; }
-
-.first-items-footer {
-  position: relative;
-  max-width: 35%;
-  margin-right: 12px; }
-
-.first-content-footer {
-  margin: 5px 0px 5px 2px; }
-
-.social-footer i {
-  position: relative;
-  font-size: 24px;
-  margin-left: 12px; }
-
-.items-footer {
-  position: relative;
-  max-width: 20%;
-  margin: 0px 5px 0px 2px;
-  min-width: 19%; }
-
-.items-footer li {
-  list-style-type: none; }
-
-.items-footer h3 {
-  font-size: 18px;
-  font-weight: bold; }
-
-.items-footer a {
-  font-size: 12px;
-  font-weight: 600;
-  opacity: 80%; }
-
-.items-footer a:hover {
-  opacity: 1 !important; }
-
-.end-footer {
-  position: relative;
-  text-align: center;
-  margin: 0px; }
 
 * {
   padding: 0;
@@ -272,7 +273,8 @@ a:hover {
   right: 0px;
   z-index: 1;
   background-color: #fff;
-  box-shadow: 0px 1px 4px #ccc; }
+  box-shadow: 0px 1px 4px #ccc;
+  margin-bottom: 12px; }
 
 #header .img-logo {
   width: 65px;
@@ -358,25 +360,26 @@ a:hover {
   display: block; }
 
 .sidebar-left {
-  width: 92px;
+  width: 120px;
   height: 100%;
   position: fixed;
   float: left;
   left: 5px;
   background-color: #fff;
-  z-index: 1; }
+  z-index: 1;
+  padding-top: 12px; }
 
 .sidebar-left a {
   display: flex;
   width: 100%;
-  height: 65px;
+  height: 92px;
   border-radius: 16px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   box-shadow: 2px 2px 7px #dce0e3;
   margin-top: 4px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500; }
 
 @media screen and (max-width: 600px) {
@@ -386,58 +389,100 @@ a:hover {
     font-size: 12px;
     height: 62px; } }
 
-.mySlides {
+.slider {
+  width: 1150px;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 132px; }
+
+.slides {
+  width: 500%;
+  height: 250px;
+  display: flex; }
+
+.slides input {
   display: none; }
 
-.slideshow-container {
-  margin-top: 65px;
-  margin-right: 32px;
-  position: relative;
-  margin-left: 110px;
-  padding-top: 20px;
-  border-radius: 20px;
-  box-shadow: 2px 2px 4px #dce0e3; }
+.slide {
+  width: 20%;
+  transition: 2s; }
 
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease; }
+.slide img {
+  width: 1150px;
+  height: 250px;
+  border-radius: 10px; }
 
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s; }
+/*css for manual slide navigation*/
+.navigation-manual {
+  position: absolute;
+  width: 1200px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center; }
 
-.mySlides img {
-  width: 100%;
-  height: 330px;
-  border-radius: 20px; }
+.manual-btn {
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s; }
 
-@-webkit-keyframes fade {
-  from {
-    opacity: .4; }
-  to {
-    opacity: 1; } }
+.manual-btn:not(:last-child) {
+  margin-right: 40px; }
 
-@keyframes fade {
-  from {
-    opacity: .4; }
-  to {
-    opacity: 1; } }
+.manual-btn:hover {
+  background: #40D3DC; }
+
+#radio1:checked ~ .first {
+  margin-left: 0; }
+
+#radio2:checked ~ .first {
+  margin-left: -20%; }
+
+#radio3:checked ~ .first {
+  margin-left: -40%; }
+
+#radio4:checked ~ .first {
+  margin-left: -60%; }
+
+/*css for automatic navigation*/
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 1200px;
+  justify-content: center;
+  margin-top: 210px; }
+
+.navigation-auto div {
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s; }
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px; }
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: #40D3DC; }
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: #40D3DC; }
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: #40D3DC; }
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: #40D3DC; }
 
 .home-content {
-  margin-left: 100px; }
+  margin-left: 142px; }
 
 .slogan-home {
   position: relative;
   margin-top: 12px;
   font-size: 20px;
-  max-width: 600px; }
+  max-width: 700px; }
 
 .slogan-home .name-slogan-home {
   font-weight: bold; }
@@ -483,7 +528,7 @@ a:hover {
   position: relative;
   margin-top: 20px;
   display: flex;
-  max-width: 900px;
+  max-width: 1100px;
   overflow: scroll; }
 
 .item-course {
@@ -544,7 +589,7 @@ a:hover {
   font-weight: lighter; }
 
 .layout-course .footer-course {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   position: relative;
   margin-left: 12px;
