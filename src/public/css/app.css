@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 @import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
-=======
+
 #container-login a {
   color: #fff; }
 
@@ -85,7 +85,7 @@ button.btn.btn-primary.btn-login {
   height: 65px;
   opacity: 70%; }
 
->>>>>>> 000079028270d763fc4491233b8ba804673ba238
+
 * {
   padding: 0;
   margin: 0;
@@ -269,9 +269,20 @@ a:hover {
   height: 330px;
   border-radius: 20px; }
 
-footer {
-  background: #222;
+footer {/*
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:60px; 
   color: #fff;
+  background:#222;
+  padding: 60px 0;*/
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height: 60px;;
+  background: #222;
+   color: #fff;
   padding: 60px 0; }
 
 .container {
