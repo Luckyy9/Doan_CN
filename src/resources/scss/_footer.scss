@@ -3,15 +3,17 @@
     margin-left: 100px;
     margin-top: 20px;
     background-color: #ccc;
+    bottom: 0px;
 }
 .footer-content{
     position: relative;
     display: flex;
+    padding-top: 12px;
 }
 .first-items-footer{
     position: relative;
     max-width: 35%;
-    margin-right: 5px;
+    margin-right: 12px;
 }
 .first-content-footer{
     margin: 5px 0px 5px 2px;
@@ -19,7 +21,7 @@
 .social-footer i{
     position: relative;
     font-size: 24px;
-    margin-right: 5px;
+    margin-left: 12px;
 }
 .items-footer{
     position: relative;
