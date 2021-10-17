@@ -1,12 +1,24 @@
-.container-footer{
-    position: relative;
-    margin-left: 100px;
-    margin-top: 20px;
-    background-color: #ccc;
+@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+footer{
+    background-color: #212121;
+    padding: 50px 20px;
+    margin: 0 0 100px;
+    
 }
-.footer-content{
-    position: relative;
+footer .container{
+    width: 100px;
+    max-width: 1100px;
+    // margin: 0 auto;
     display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 0 100px;
+}
+footer .ftr  h3{
+    font-size: 1.4em;
+    margin-bottom: 1.2em;
+    color: #fff;
 }
 .first-items-footer{
     position: relative;
