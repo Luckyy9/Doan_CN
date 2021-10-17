@@ -1,10 +1,16 @@
 @import 'variable';
+<<<<<<< HEAD
 
 @import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 //@import 'footer';
 @import 'login';
 @import 'lession';
 
+=======
+@import 'login';
+@import 'lession';
+@import 'footer';
+>>>>>>> bf8512d96503ac34676a02122d5abab91a4b10ee
 *{
     padding: 0;
     margin: 0;
@@ -32,9 +38,7 @@ a{
 }
  a:hover{
     color: #000;
-    opacity: 90%;
-    font-size: 18px;
-    font-weight: bold;
+    opacity: 80%;
     text-decoration: none;
 
 }
@@ -147,11 +151,10 @@ a{
     display: block;
 }
 .sidebar-left{
-    width: 110px;
+    width: 92px;
     height: 100%;
     position: fixed;
     float: left;
-    margin-top: 16px;
     left: 5px;
     background-color: #fff;
     z-index: 1;
@@ -159,15 +162,15 @@ a{
 .sidebar-left a{
     display: flex;
     width: 100%;
-    height: 92px;
-    border: 1px soid $shadow-color;
+    height: 65px;
     border-radius: 16px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     box-shadow: 2px 2px 7px $shadow-color;
     margin-top: 4px;
-
+    font-size: 16px;
+    font-weight: 500;
 }
 
 // sidebar-home responsive
@@ -224,6 +227,7 @@ a{
     height: 330px;
     border-radius: 20px;
 }
+<<<<<<< HEAD
 footer {/*
     position:absolute;
     bottom:0;
@@ -315,6 +319,8 @@ footer .end{
 }
 
 }
+=======
+>>>>>>> bf8512d96503ac34676a02122d5abab91a4b10ee
 
 @-webkit-keyframes fade {
   from {opacity: .4} 
@@ -326,7 +332,24 @@ footer .end{
   to {opacity: 1}
 }
 
-/* Course item */
+// Home conntent
+.home-content{
+    margin-left: 100px;
+}
+
+// Slogan home
+.slogan-home{
+    position: relative;
+    margin-top: 12px;
+    font-size: 20px;
+    max-width: 600px;
+}
+.slogan-home .name-slogan-home{
+    font-weight: bold;
+}
+
+// Course home-------------------------------
+
 .bg-color-violet{
     background: linear-gradient(to bottom right, #6631FF 0%, #A431FF 30%,#FF44F8 70%, #EE89FF 100%)
 }
@@ -340,12 +363,71 @@ footer .end{
     background: linear-gradient(to top right, #FFEC41 0%, #DE08A2 40%,#FF73AE 80%, #FFCEF1 100%)
 }
 
+.course-home{
+    position: relative;
+}
+
+.header-course-home{
+    position: relative;
+    margin-top: 32px;
+}
+.name-course-home{
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 0px;
+}
+.icon-users{
+    position: relative;
+    opacity: 70%;
+}
+.member-course-home{
+    margin-top: -13px;
+    font-size: 12px;
+    font-weight: 600;
+    position: relative;
+    margin-left: 25px;
+    opacity: 70%;
+}
+
+.list-course-home{
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    max-width: 900px;
+    overflow: scroll;
+}
 .item-course{
-    position: absolute;
+    position: relative;
     width: 309px;
     height: 181px;
     border-radius: 20px;
+    margin-right: 20px;
   }
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background:$shadow-color; 
+    border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #333;
+
+}
 .icon-course{
     position: absolute;
     width: 164px;
@@ -367,7 +449,7 @@ footer .end{
     font-size: 32px;
     font-weight: bolder;
     color: #fff;
-    margin-top: 50px;
+    padding-top: 48px;
     margin-left: 120px;
     text-align: center;
 }
@@ -377,4 +459,58 @@ footer .end{
     position: relative;
     color: #fff;
     font-weight: lighter;
+}
+
+.layout-course .footer-course{
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+    margin-left: 12px;
+    margin-bottom: 0px;
+}
+
+
+// News--------------------------
+
+.list-news-home{
+    position: relative;
+    margin-top: 20px;
+}
+.list-news-home .layout-news{
+    display: flex;
+    margin-top: 12px;
+    max-width: 280px;
+}
+.img-news-home{
+    width: 280px;
+    height: 130px;
+    border-radius: 20px;
+    position: relative;
+    margin-right: 20px;
+}
+.title-news-home{
+    margin: 5px 0px 2px 5px;
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+}
+.content-news-home{
+    position: relative;
+    margin: 0px 0px 8px 5px;
+    font-size: 14px;
+    font-weight: lighter
+}
+.footer-news-home{
+    position: relative;
+    display: flex;
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+.icon-like, .icon-comment, .icon-share{
+    margin: 0px 32px 0px 5px;
+    display: inline-flex;
+    opacity: 70%;
+}
+.number-icon-news{
+    margin-left: 4px;
 }
