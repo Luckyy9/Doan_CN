@@ -1,0 +1,143 @@
+.container-user{
+    position: relative;
+    padding-top: 20px;
+    margin-left: 32px;
+}
+.header-user{
+    position: relative;
+    display: flex;
+    height: 232px;
+    width: 775px;
+    box-shadow: 1px 1px 4px #ccc;
+    border-radius: 15px;
+}
+.avatar-header-user{
+    width: 173px;
+    height: 173px;
+    border-radius: 20px;
+    margin: auto 24px;
+    box-shadow: 0px 0px 5px #ccc;
+}
+.name-header-user{
+    margin: 30px 0px 4px 0px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.email-header-user{
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 70%;
+}
+.info-header-user i{
+    display: inline-flex;
+    opacity: 70%;
+    font-size: 18px;
+}
+.info-header-user .time-header-user{
+    margin-bottom: 0px;
+}
+.facebook-header-user{
+    margin: 4px 0px 8px 0px;
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 70%;
+}
+.icon-header-user{
+    width: 52px;
+    height: 34px;
+}
+.header-user button{
+    width: 132px;
+    height: 54px;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    margin: 30px 0px 0px 261px;
+    box-shadow: 2px 2px 4px #ccc;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.container-user h2{
+    position: relative;
+    margin: 13px 0px 8px 16px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.dashboard-user{
+    position: relative;
+    margin-top: 12px;
+    display: flex;
+    width: 1100px;
+    height: 300px;
+    box-shadow: 0px -1px 4px #ccc;
+    border-radius: 10px;
+}
+.mission-dashboard-user{
+    position: relative;
+    margin: 4px 0px 4px 6px;
+}
+.item-mission-dashboard{
+    position: relative;
+    display: flex;
+    width: 510px;
+    height: 105px;
+    box-shadow: 1px 1px 4px #ccc;
+    border-radius: 10px;
+    margin-top: 12px;
+    margin-bottom: 16px
+}
+.item-mission-dashboard img{
+    width: 85px;
+    height: 85px;
+}
+.title-mission-item-dashboard{
+    display: inline-flex;
+}
+.name-mission-item-dashboard{
+    margin: 2px 12px 8px 4px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.number-mission-item-dashboard{
+    margin: 12px 0px 8px 237px;
+    font-size: 12px;
+    font-weight: 550;
+    opacity: 70%;
+}
+.progress-mission-item-dashboard{
+    height: 22px;
+    width: 88px;
+    border-radius: 15px;
+    position: absolute;
+}
+.all-progress-mission-item{
+    height: 22px;
+    width: 390px;
+    border-radius: 15px;
+    background-color: #ccc;
+}
+
+.achievements-dashboard-user{
+    position: relative;
+    height: 100%;
+    width: 500px;
+    margin: 12px 0px 8px 8px;
+}
+.item-achievements-dashboard-user{
+    width: 200px;
+    height: 103px;
+    box-shadow: 0px 0px 5px #ccc;
+    display: flex;
+    border-radius: 15px;
+    margin-left: 32px;
+}
+.item-achievements-dashboard-user img{
+    width: 85px;
+    height: 85px;
+}
+.name-item-achievements-dashboard-user{
+    margin: auto;
+    font-size: 18px;
+    font-weight: 750
+} 

@@ -1,10 +1,11 @@
 
 .container-footer{
     position: relative;
-    margin-left: 100px;
+    margin-left: 130px;
     margin-top: 20px;
     background-color: #ccc;
     bottom: 0px;
+    width: 100%;
 }
 .footer-content{
     position: relative;
@@ -34,11 +35,11 @@
     list-style-type: none;
 }
 .items-footer h3{
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
 }
 .items-footer a{
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 600;
     opacity: 80%;
 }
