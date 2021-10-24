@@ -695,15 +695,15 @@ button.btn.btn-primary.btn-login {
   position: relative;
   height: 100%;
   width: 500px;
-  margin: 12px 0px 8px 8px; }
+  margin: 12px 0px 8px 64px; }
 
 .item-achievements-dashboard-user {
-  width: 200px;
+  max-width: 190px;
   height: 103px;
   box-shadow: 0px 0px 5px #ccc;
   display: flex;
   border-radius: 15px;
-  margin-left: 32px; }
+  margin-left: 24px; }
 
 .item-achievements-dashboard-user img {
   width: 85px;
