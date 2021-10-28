@@ -1,7 +1,10 @@
 const express= require('express')
-const router= express.Router();
+const router= express.Router()
+
+
 
 const loginController= require('../app/controler/LoginController')
+
 
 
 router.use('/', loginController.login)

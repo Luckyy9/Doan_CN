@@ -7,6 +7,8 @@ const newsRouter=require('./news')
 const aboutRouter=require('./about')
 const userRouter=require('./user')
 
+
+
 function route(app){
 
     app.use('/user',userRouter)

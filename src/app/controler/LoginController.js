@@ -1,9 +1,10 @@
 
+
 class LoginController{
-    login(rep, res){
+    login(rep, res, next){
         
     // get /login
-    res.render('login')
+    res.get('login')
     
 
    }
