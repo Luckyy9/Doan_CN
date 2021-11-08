@@ -1,7 +1,5 @@
 const homeRouter=require('./home')
-const loginRouter=require('./login')
 const lessionRouter=require('./lession')
-const registerRouter=require('./register')
 const coursesRouter=require('./courses')
 const newsRouter=require('./news')
 const aboutRouter=require('./about')
@@ -20,10 +18,6 @@ function route(app){
     app.use('/courses',coursesRouter)
 
     app.use('/lession',lessionRouter)
-    
-    app.use('/login',loginRouter)
-
-    app.use('/register',registerRouter)
     
     app.use('/',homeRouter)
    

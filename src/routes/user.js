@@ -1,10 +1,17 @@
 const express= require('express')
 const router= express.Router()
 
-const csurf = require('csurf')
+
 
 const userController= require('../app/controler/UserController')
 
-router.get('/',userController.user)
+router.get('/',isLoggedIn,userController.user)
 
+function isLoggedIn(req, res, next) {
+    if (req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect('/');
+}
 module.exports=router;
+
