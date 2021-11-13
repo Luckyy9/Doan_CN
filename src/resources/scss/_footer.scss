@@ -1,3 +1,4 @@
+
 @import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 footer{
     background-color: #212121;
@@ -15,15 +16,25 @@ footer .container{
     flex-wrap: wrap;
     margin: 0 0 100px;
 }
-footer .ftr  h3{
-    font-size: 1.4em;
-    margin-bottom: 1.2em;
-    color: #fff;
+
+.container-footer{
+    position: relative;
+    margin-left: 130px;
+    margin-top: 20px;
+    background-color: #ccc;
+    bottom: 0px;
+    width: 100%;
+
+}
+.footer-content{
+    position: relative;
+    display: flex;
+    padding-top: 12px;
 }
 .first-items-footer{
     position: relative;
     max-width: 35%;
-    margin-right: 5px;
+    margin-right: 12px;
 }
 .first-content-footer{
     margin: 5px 0px 5px 2px;
@@ -31,7 +42,7 @@ footer .ftr  h3{
 .social-footer i{
     position: relative;
     font-size: 24px;
-    margin-right: 5px;
+    margin-left: 12px;
 }
 .items-footer{
     position: relative;
@@ -43,11 +54,11 @@ footer .ftr  h3{
     list-style-type: none;
 }
 .items-footer h3{
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
 }
 .items-footer a{
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 600;
     opacity: 80%;
 }

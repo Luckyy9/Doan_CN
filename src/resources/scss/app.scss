@@ -2,12 +2,20 @@
 @import 'footer';
 @import 'login';
 @import 'lession';
+
+@import 'courses';
+@import 'news';
+@import 'about';
+@import 'user';
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 html{
+    max-width: 1150px;
+
 	scroll-behavior: smooth;
 
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -33,7 +41,14 @@ a{
     text-decoration: none;
 
 }
+ 
+.mgl-132{
+    margin-left: 132px;
+}
 
+.mg-courses{
+    margin: 5px 0px 12px 16px;
+}
 
 // Header
 #header{
@@ -46,6 +61,7 @@ a{
     z-index: 1;
     background-color: #fff;
     box-shadow: 0px 1px 4px #ccc;
+    margin-bottom: 12px;
 }
 
 #header .img-logo{
@@ -142,25 +158,26 @@ a{
     display: block;
 }
 .sidebar-left{
-    width: 92px;
+    width: 120px;
     height: 100%;
     position: fixed;
     float: left;
     left: 5px;
     background-color: #fff;
     z-index: 1;
+    padding-top: 12px;
 }
 .sidebar-left a{
     display: flex;
     width: 100%;
-    height: 65px;
+    height: 92px;
     border-radius: 16px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     box-shadow: 2px 2px 7px $shadow-color;
     margin-top: 4px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
 }
 
@@ -181,11 +198,11 @@ a{
 
 //Slideshow container 
 .slider{
-    width: 1200px;
+    width: 1150px;
     height: 250px;
     border-radius: 10px;
     overflow: hidden;
-    margin-left: 100px;   
+    margin-left: 132px;  
 }
   
 .slides{
@@ -203,8 +220,9 @@ a{
 }
   
 .slide img{
-    width: 1200px;
-    height: 250px;  
+    width: 1150px;
+    height: 250px; 
+    border-radius: 10px; 
 }
   
   /*css for manual slide navigation*/
@@ -225,90 +243,6 @@ a{
     transition: 1s;
 }
 
-footer {/*
-    position:absolute;
-    bottom:0;
-    width:100%;
-    height:60px; 
-    color: #fff;
-    background:#222;
-    padding: 60px 0;*/
-    position:absolute;
-    bottom:0;
-    width:100%;
-    height: 60px;;
-    background: #222;
-     color: #fff;
-    padding: 60px 0; }
-  
-.container{
-    width: 100%;
-    max-width: 1100px;
-    padding: 0 20px;
-    margin: 0 auto;
-}
-li{
-    list-style: none;
-    line-height: 2;
-}
-a{
-    text-decoration: none;
-    color: #ccc;
-}
-.footer-content{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-.items{
-    flex-basis: 20%;
-}
-.items .logo{
-    text-transform: capitalize;
-    font-size: 1.4em;
-    color: #b6b6b6;
-}
-.items p{
-    margin: 1.2em 0;
-}
-.social{
-    display: flex;
-}
-.social a{
-    height: 30px;
-    width: 30px;
-    background: #383535;
-    border-radius: 5px;
-    margin:10px 5px;
-    text-align: center;
-}
-.social a i{
-    font-size: 1.3em;
-    line-height: 30px;
-}
-.items h3{
-    position: relative;
-    font-size: 1.3em;
-    margin-bottom: 1rem;
-    color: aliceblue;
-}
-.items h3::after{
-    content:"";
-    position: absolute;
-    width: 40px;
-    height: 3px;
-    background: #fff;
-    bottom: -4px;
-    left: 0;
-}
-hr{
-    opacity: .3;
-}
-footer .end{
-    text-align: center;
-    padding: 20px 0 0 0;
-}
 @media (max-width:640px){
     .items{
     flex-basis: 80%;
@@ -387,7 +321,7 @@ footer .end{
         
 // Home conntent
 .home-content{
-    margin-left: 100px;
+    margin-left: 142px;
 }
 
 // Slogan home
@@ -395,7 +329,7 @@ footer .end{
     position: relative;
     margin-top: 12px;
     font-size: 20px;
-    max-width: 600px;
+    max-width: 700px;
 }
 .slogan-home .name-slogan-home{
     font-weight: bold;
@@ -414,6 +348,9 @@ footer .end{
 }
 .bg-color-pink{
     background: linear-gradient(to top right, #FFEC41 0%, #DE08A2 40%,#FF73AE 80%, #FFCEF1 100%)
+}
+.bg-color-grenn{
+    background: linear-gradient(to bottom, #81FBB8 0%, #28C76F 100%)
 }
 
 .course-home{
@@ -447,7 +384,7 @@ footer .end{
     position: relative;
     margin-top: 20px;
     display: flex;
-    max-width: 900px;
+    max-width: 1100px;
     overflow: scroll;
 }
 .item-course{
@@ -515,7 +452,7 @@ footer .end{
 }
 
 .layout-course .footer-course{
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     position: relative;
     margin-left: 12px;
