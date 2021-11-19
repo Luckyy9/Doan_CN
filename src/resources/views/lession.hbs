@@ -1,11 +1,80 @@
 <div id="container-lession">
-
 {{!-- Video --}}
      <div class="video-lession">
-    <video class="bg-video-lession" loop autoplay muted playsinline >
-        <source src="http://localhost:3000/img/background-lession2.mp4" type="video/mp4">
-       
-    </video>
+
+         <video id="video-ai" class="bg-video-lession" loop autoplay muted playsinline 
+         src="http://localhost:3000/img/videodoan.mp4" >
+        
+        </video>
+        <div id="content-answer-js" class="content-voice bg-color-black">
+             <p class="content-voice-answer">hello</p>
+        </div>
+
+         <div class="time-answer">
+             <img src="http://localhost:3000/img/watch.png" alt="">
+             <p class="time-number-lession">You have 60s for answer</p>
+             <div id="bg-time-lession-js">
+                 <div id="time-lession-js" class="bg-color-green"></div>
+             </div>
+         </div>
+
+         <div class="voice-lession">
+             <i onclick="Speak()" class="fas fa-circle icon-circle " id="icon-circle-js"></i>
+             <i onclick="StopSpeak()" class="fas fa-microphone icon-voice " id="icon-voice-js"></i>
+             <p>Tap to speak</p>
+         </div>
+
+         <div class="volume-lession">
+             <i onclick="SpeakAgain()"class="fas fa-volume-up icon-volume" id="icon-volume-js"></i>
+              <i onclick="SpeakEnd()"class="fas fa-volume-up icon-volume" id="icon-volume-off-js" style="display: none; color:blue"></i>
+         </div>
+
+         <div class="setting-lession">
+             <i onclick="OpenModalSetting()" class="fas fa-cog icon-setting" ></i>
+             <div class="modal-setting-lession bg-color-white" id="setting-modal-js">
+                    <div class="title-setting-modal">Âm lượng: 
+                         <p id="number-volume-js">0</p>
+                    </div>
+                 <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50"id="volume-setting-modal-js">
+                 </div>   
+                    <div class="title-setting-modal">Tốc độ: 
+                         <p id="number-speed-js">0</p>
+                    </div>
+                 <div class="slidecontainer">
+                    <input type="range" min="1" max="10" value="5"id="speed-setting-modal-js">
+                 </div> 
+             </div>
+         </div>
+
+         <div class="ai-lession">
+             <i onclick="OpenModalAi()" class="fas fa-chevron-circle-down icon-ai-drop"></i>
+             <div class="ai-modal-lession" id="modal-ai-js">
+                 <div onclick="OpenNewAIUsm()" class="item-ai-modal-lession active-ai">
+                     <img src="http://localhost:3000/img/ai1.jpg" alt="AI" class="avatar-ai-lession">
+                     <img src="http://localhost:3000/img/vn.png" alt="AI" class="co-ai-lession">
+                 </div>
+                 <div onclick="OpenNewAIUk()" class="item-ai-modal-lession">
+                     <img src="http://localhost:3000/img/ai1.jpg" alt="AI" class="avatar-ai-lession">
+                     <img src="http://localhost:3000/img/vn.png" alt="AI" class="co-ai-lession">
+                 </div>
+                 <div onclick="OpenNewAIUsg()" class="item-ai-modal-lession">
+                     <img src="http://localhost:3000/img/ai1.jpg" alt="AI" class="avatar-ai-lession">
+                     <img src="http://localhost:3000/img/vn.png" alt="AI" class="co-ai-lession">
+                 </div>
+                 <div onclick="OpenNewAICn()" class="item-ai-modal-lession">
+                     <img src="http://localhost:3000/img/ai1.jpg" alt="AI" class="avatar-ai-lession">
+                     <img src="http://localhost:3000/img/vn.png" alt="AI" class="co-ai-lession">
+                 </div>
+             </div>
+        
+        
+         
+         
+         
+         </div>
+         
+        
     </div>
 
 {{!-- End video --}}
@@ -88,3 +157,88 @@
 
 {{!-- End tab information  --}}
 
+<script>
+    var speak = document.getElementById("icon-circle-js");
+    var endspeak = document.getElementById("icon-voice-js");
+    var speakagain =document.getElementById("icon-volume-js");
+    var speakoff = document.getElementById("icon-volume-off-js");
+    var numbervolume = document.getElementById("number-volume-js");
+    var slidervolume = document.getElementById("volume-setting-modal-js");
+    numbervolume.innerHTML=slidervolume.value;
+    var numberspeed = document.getElementById("number-speed-js");
+    var sliderspeed = document.getElementById("speed-setting-modal-js");
+    numberspeed.innerHTML=sliderspeed.value;
+    var opensetingmodal = document.getElementById("setting-modal-js");
+    var modalai = document.getElementById("modal-ai-js");
+    var selectais = modalai.getElementsByClassName("item-ai-modal-lession");
+    var videoai = document.getElementById("video-ai");
+    var openmodalai = document.getElementById("modal-ai-js")
+    var contentanswer =document.getElementById("content-answer-js")
+
+    function Speak(){
+        endspeak.style.display="block";
+        speak.style.opacity="0";
+        contentanswer.classList.add("show");
+    }
+    function StopSpeak(){
+        endspeak.style.display="none";
+        speak.style.opacity="0.4";
+        //contentanswer.classList.remove("show");
+    }
+    function SpeakAgain(){
+        speakoff.style.display="block";
+        speakagain.style.display="none"
+    }
+    function SpeakEnd(){
+        speakoff.style.display="none";
+        speakagain.style.display="block";
+    }
+   
+    slidervolume.oninput = function() {
+      numbervolume.innerHTML = this.value;
+    }
+    sliderspeed.oninput = function() {
+      numberspeed.innerHTML = this.value;
+    }
+    
+    for (var i = 0; i < selectais.length; i++) {
+        selectais[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active-ai");
+            current[0].className = current[0].className.replace(" active-ai", "");
+            this.className += " active-ai";
+            });
+    }
+    function OpenModalSetting() {
+      opensetingmodal.classList.toggle("show");
+    }
+    function OpenModalAi() {
+      openmodalai.classList.toggle("show");
+    }
+    window.onclick = function(event) {
+    if (!event.target.matches('.icon-ai-drop')) {
+        var dropdowns = document.getElementsByClassName("ai-modal-lession");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+           }
+        }
+      }
+    }
+    function OpenNewAIUsm(){
+
+       videoai.src = "http://localhost:3000/img//videodoan.mp4";
+    }
+    function OpenNewAIUk(){
+     
+       videoai.src = "http://localhost:3000/img//videodoan1.mp4";
+    }   
+    function OpenNewAIUsg(){
+      
+    }  
+    function OpenNewAICn(){
+      
+    }       
+   
+</script>

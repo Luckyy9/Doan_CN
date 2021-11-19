@@ -120,6 +120,170 @@ button.btn.btn-primary.btn-login {
   margin-left: -25px;
   margin-right: 12px; }
 
+.content-voice {
+  position: absolute;
+  width: 367px;
+  height: 64px;
+  margin-top: -117px;
+  margin-left: 90px;
+  border: solid 1px #fff;
+  border-radius: 50px;
+  box-shadow: 1px 1px 4px #fff;
+  display: none; }
+  .content-voice .content-voice-answer {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ccc;
+    margin: auto 24px; }
+
+.time-answer {
+  position: absolute;
+  top: 22px;
+  left: 215px; }
+  .time-answer img {
+    width: 50px; }
+  .time-answer p {
+    font-size: 18px;
+    font-weight: 800;
+    color: #ccc;
+    margin-top: -41px;
+    margin-left: 54px; }
+  .time-answer #bg-time-lession-js {
+    width: 280px;
+    background-color: #ddd;
+    border-radius: 15px; }
+  .time-answer #time-lession-js {
+    width: 10%;
+    height: 20px;
+    border-radius: 15px; }
+
+.voice-lession {
+  position: absolute;
+  font-size: 40px;
+  bottom: 24px;
+  margin-left: 197px;
+  text-align: center; }
+  .voice-lession p {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 500;
+    opacity: 60%;
+    margin-bottom: 0px; }
+  .voice-lession .icon-circle {
+    color: #a9081c;
+    border-radius: 100px;
+    border: 7px solid #fff;
+    opacity: 0.4; }
+  .voice-lession .icon-circle:hover {
+    cursor: pointer;
+    opacity: 0.8; }
+  .voice-lession .icon-voice {
+    position: absolute;
+    color: #a9081c;
+    opacity: 0.4;
+    left: 54px;
+    bottom: 46px;
+    display: none;
+    animation: flash 1s infinite; }
+
+@keyframes flash {
+  0% {
+    font-size: 40px; }
+  50% {
+    font-size: 50px;
+    opacity: 60%; }
+  100% {
+    font-size: 40px; } }
+  .voice-lession .icon-voice:hover {
+    cursor: pointer;
+    opacity: 80%; }
+
+.volume-lession .icon-volume {
+  position: absolute;
+  bottom: 73px;
+  color: #ccc;
+  right: 372px;
+  font-size: 28px;
+  opacity: 70%;
+  z-index: 2; }
+
+.volume-lession .icon-volume:hover {
+  cursor: pointer;
+  opacity: 1; }
+
+.setting-lession {
+  position: absolute;
+  top: 8px;
+  right: 30px; }
+  .setting-lession .icon-setting {
+    font-size: 30px;
+    opacity: 70%;
+    margin-left: 125px;
+    margin-top: 6px; }
+  .setting-lession .icon-setting:hover {
+    cursor: pointer;
+    opacity: 1; }
+  .setting-lession .modal-setting-lession {
+    opacity: 0.6;
+    width: 165px;
+    height: 165px;
+    border-radius: 10px;
+    display: none; }
+    .setting-lession .modal-setting-lession .title-setting-modal {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 0px 8px 8px; }
+      .setting-lession .modal-setting-lession .title-setting-modal p {
+        position: absolute;
+        margin-top: -26px;
+        margin-left: 100px; }
+    .setting-lession .modal-setting-lession .slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 25px;
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s; }
+    .setting-lession .modal-setting-lession .slider:hover {
+      opacity: 1;
+      cursor: pointer; }
+
+.ai-lession {
+  position: absolute;
+  top: 21px;
+  left: 3px; }
+  .ai-lession .icon-ai-drop {
+    font-size: 38px;
+    color: #fff;
+    opacity: 50%;
+    margin-left: 26px; }
+  .ai-lession .icon-ai-drop:hover {
+    cursor: pointer;
+    opacity: 1; }
+  .ai-lession .active-ai {
+    border: solid 6px #236AF2 !important;
+    box-shadow: 2px 2px 7px blue !important; }
+  .ai-lession .ai-modal-lession {
+    display: none; }
+    .ai-lession .ai-modal-lession .item-ai-modal-lession {
+      border: solid 6px #ccc;
+      border-radius: 15px;
+      width: 80px;
+      height: 80px;
+      margin: 6px;
+      box-shadow: 2px 2px 7px #666; }
+      .ai-lession .ai-modal-lession .item-ai-modal-lession .avatar-ai-lession {
+        width: 69px;
+        border-radius: 10px; }
+      .ai-lession .ai-modal-lession .item-ai-modal-lession .co-ai-lession {
+        width: 30px;
+        margin-top: -48px;
+        margin-left: 38px;
+        border-radius: 0px 0px 5px 0px;
+        opacity: 0.7; }
+
 .sidebar-lession {
   position: relative;
   float: right;
@@ -727,6 +891,9 @@ html {
 .clear {
   clear: both; }
 
+.show {
+  display: block !important; }
+
 h1 {
   font-size: 18px; }
 
@@ -815,9 +982,6 @@ a:hover {
 #header .subnav-login a:hover {
   background-color: #ddd;
   border-radius: 10px; }
-
-.show {
-  display: block; }
 
 #header .icon-bell {
   float: right;
@@ -960,6 +1124,19 @@ a:hover {
 
 .home-content {
   margin-left: 142px; }
+  .home-content ::-webkit-scrollbar {
+    width: 10px;
+    height: 5px; }
+  .home-content ::-webkit-scrollbar {
+    width: 10px;
+    height: 5px; }
+  .home-content ::-webkit-scrollbar-track {
+    border-radius: 10px; }
+  .home-content ::-webkit-scrollbar-thumb {
+    background: #dce0e3;
+    border-radius: 10px; }
+  .home-content ::-webkit-scrollbar-thumb:hover {
+    background: #333; }
 
 .slogan-home {
   position: relative;
@@ -973,6 +1150,9 @@ a:hover {
 .bg-color-violet {
   background: linear-gradient(to bottom right, #6631FF 0%, #A431FF 30%, #FF44F8 70%, #EE89FF 100%); }
 
+.bg-color-red {
+  background-color: radial-gradient(#a9081c 20%, #d05146 60%, #b15a4b 100%); }
+
 .bg-color-blue {
   background: linear-gradient(to bottom left, #236AF2 0%, #34ECE1 40%, #54DEE7 60%, #B6FF7C 90%); }
 
@@ -982,8 +1162,12 @@ a:hover {
 .bg-color-pink {
   background: linear-gradient(to top right, #FFEC41 0%, #DE08A2 40%, #FF73AE 80%, #FFCEF1 100%); }
 
-.bg-color-grenn {
+.bg-color-green {
   background: linear-gradient(to bottom, #81FBB8 0%, #28C76F 100%); }
+
+.bg-color-black {
+  background: linear-gradient(to bottom right, #000 0%, #666 100%);
+  opacity: 0.6; }
 
 .course-home {
   position: relative; }
@@ -1023,24 +1207,6 @@ a:hover {
   height: 181px;
   border-radius: 20px;
   margin-right: 20px; }
-
-::-webkit-scrollbar {
-  width: 10px;
-  height: 5px; }
-
-::-webkit-scrollbar {
-  width: 10px;
-  height: 5px; }
-
-::-webkit-scrollbar-track {
-  border-radius: 10px; }
-
-::-webkit-scrollbar-thumb {
-  background: #dce0e3;
-  border-radius: 10px; }
-
-::-webkit-scrollbar-thumb:hover {
-  background: #333; }
 
 .icon-course {
   position: absolute;

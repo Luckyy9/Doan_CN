@@ -6,8 +6,8 @@ const ObjectId = Schema.ObjectId;
 const User = new Schema({
  email:{type:String, required: true},
  password:{type:String},
- img:{type:String},
- name:{type:String},
+ img:{type:String, default:'http://localhost:3000/img/logo_web.png'},
+ name:{type:String, default:'Luck'},
  infomation:{type:String},
  uid:{type:String}
 },{
