@@ -1,10 +1,10 @@
 .container-footer {
   position: relative;
-  margin-left: 130px;
-  margin-top: 20px;
+  left: 130px;
+  top: 20px;
   background-color: #ccc;
   bottom: 0px;
-  width: 100%; }
+  width: 1203px; }
 
 .footer-content {
   position: relative;
@@ -110,36 +110,158 @@ button.btn.btn-primary.btn-login {
   position: relative;
   display: flex; }
 
+.start-lession {
+  position: absolute;
+  height: 500px;
+  width: 800px;
+  margin-top: 12px;
+  z-index: 1000; }
+  .start-lession .bg-start-lession {
+    position: absolute;
+    height: 500px;
+    width: 800px;
+    background-color: #fff;
+    opacity: 0.6;
+    border-radius: 50px;
+    border: 4px solid #ccc; }
+  .start-lession .content-start-lession {
+    z-index: 1001;
+    opacity: 0.8 !important;
+    color: #F81717;
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 42px; }
+  .start-lession .row-img-start-lession {
+    z-index: 1111;
+    position: absolute;
+    margin: 164px 8px 0px 8px;
+    left: 33px; }
+    .start-lession .row-img-start-lession .colum-img-start-lession {
+      width: 33.333%;
+      height: 119px;
+      float: left; }
+      .start-lession .row-img-start-lession .colum-img-start-lession img {
+        border: 2px solid #EF998E;
+        border-radius: 15px;
+        height: 119px; }
+  .start-lession .slogan-lession {
+    z-index: 1111;
+    position: absolute;
+    font-size: 30px;
+    font-weight: 650;
+    color: #F81717;
+    margin: 181px 0px 0px 280px; }
+  .start-lession .btn-start-lession {
+    z-index: 1111;
+    position: absolute;
+    margin-top: 252px;
+    margin-left: 339px;
+    height: 57px;
+    width: 120px;
+    font-size: 32px;
+    font-weight: 700;
+    background-color: #04AA6D;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer; }
+  .start-lession .btn-start-lession:hover {
+    background-color: #46a049;
+    border: none; }
+
 .video-lession {
   position: relative;
   margin-top: 5px;
   margin-left: 5px; }
+  .video-lession .bg-video-lession {
+    width: 900px;
+    margin-left: -25px;
+    margin-right: 12px; }
+  .video-lession .svg-animation-lession {
+    position: absolute;
+    margin-top: 72px;
+    margin-left: 121px; }
+  .video-lession svg {
+    height: 250px;
+    width: 200px; }
+    .video-lession svg #arm-right {
+      transform-box: fill-box; }
+    .video-lession svg #arm-left {
+      transform-box: fill-box; }
 
-.bg-video-lession {
-  width: 900px;
-  margin-left: -25px;
-  margin-right: 12px; }
+.head-ok {
+  animation: true-head 3s ease-in-out infinite alternate;
+  transform-origin: center; }
+
+.head-speak {
+  animation: updown 1.5s ease-in-out infinite alternate; }
+
+.eyes-listen {
+  animation: eyes 1.5s ease-in-out infinite alternate; }
+
+.body-updown {
+  animation: updown 1.5s ease-in-out infinite alternate;
+  transform-origin: bottom; }
+
+.arm-right-bye {
+  animation: action-arm-right 1s ease-in-out infinite alternate !important; }
+
+.arm-left-listen {
+  transform: rotateZ(-16deg) scaleX(1) scaleY(-1) translateX(30px) translateY(-162px) translateZ(2px) !important; }
+
+@keyframes eyes {
+  from {
+    transform: translateX(-24px); }
+  to {
+    transform: translateX(24px); } }
+
+@keyframes updown {
+  from {
+    transform: rotateX(0deg); }
+  to {
+    transform: rotateX(-20deg); } }
+
+@keyframes true-head {
+  form {
+    transform: rotateZ(0deg); }
+  to {
+    transform: rotateZ(10deg); } }
+
+@keyframes true-body {
+  form {
+    transform: rotateZ(0deg); }
+  to {
+    transform: rotateZ(4deg); } }
+
+@keyframes action-arm-right {
+  from {
+    transform: rotateZ(58deg) scaleX(1) scaleY(-1) translateX(-19px) translateY(-42px); }
+  to {
+    transform: rotateZ(13deg) scaleX(1) scaleY(-1) translateX(-19px) translateY(-42px); } }
 
 .content-voice {
   position: absolute;
   width: 367px;
   height: 64px;
-  margin-top: -117px;
-  margin-left: 90px;
+  bottom: 42px;
+  left: 175px;
   border: solid 1px #fff;
   border-radius: 50px;
   box-shadow: 1px 1px 4px #fff;
   display: none; }
   .content-voice .content-voice-answer {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 500;
     color: #ccc;
-    margin: auto 24px; }
+    margin-top: 9px;
+    margin-left: 25px;
+    overflow: auto; }
 
 .time-answer {
   position: absolute;
-  top: 22px;
-  left: 215px; }
+  top: 18px;
+  left: 279px; }
   .time-answer img {
     width: 50px; }
   .time-answer p {
@@ -160,19 +282,19 @@ button.btn.btn-primary.btn-login {
 .voice-lession {
   position: absolute;
   font-size: 40px;
-  bottom: 24px;
-  margin-left: 197px;
+  bottom: -6px;
+  margin-left: 287px;
   text-align: center; }
   .voice-lession p {
     font-size: 24px;
-    color: #fff;
+    color: #808080;
     font-weight: 500;
     opacity: 60%;
     margin-bottom: 0px; }
   .voice-lession .icon-circle {
     color: #a9081c;
     border-radius: 100px;
-    border: 7px solid #fff;
+    border: 7px solid #808080;
     opacity: 0.4; }
   .voice-lession .icon-circle:hover {
     cursor: pointer;
@@ -200,9 +322,9 @@ button.btn.btn-primary.btn-login {
 
 .volume-lession .icon-volume {
   position: absolute;
-  bottom: 73px;
-  color: #ccc;
-  right: 372px;
+  bottom: 206px;
+  color: #808080;
+  left: 297px;
   font-size: 28px;
   opacity: 70%;
   z-index: 2; }
@@ -250,13 +372,58 @@ button.btn.btn-primary.btn-login {
       opacity: 1;
       cursor: pointer; }
 
+.layout-quesion {
+  position: absolute;
+  top: 110px;
+  left: 278px;
+  width: 400px;
+  height: 113px; }
+  .layout-quesion .bg-layout-quesion {
+    border-radius: 20px;
+    opacity: 70%;
+    height: 113px;
+    box-shadow: 2px 2px 4px #a9081c; }
+  .layout-quesion .content-quesion {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: -99px;
+    position: absolute;
+    margin-left: 26px; }
+
+.line-lession {
+  width: 630px;
+  position: absolute;
+  top: 326px;
+  left: 103px; }
+  .line-lession .line {
+    height: 2px; }
+  .line-lession .number-quesion {
+    font-size: 24px;
+    font-weight: 550;
+    color: #808080;
+    text-align: center;
+    margin-bottom: 2px; }
+  .line-lession .icon-left-lession {
+    position: absolute;
+    font-size: 28px;
+    top: 5px;
+    left: 244px;
+    opacity: 40%; }
+  .line-lession .icon-right-lession {
+    position: absolute;
+    font-size: 28px;
+    top: 5px;
+    right: 236px;
+    opacity: 40%; }
+
 .ai-lession {
   position: absolute;
   top: 21px;
   left: 3px; }
   .ai-lession .icon-ai-drop {
     font-size: 38px;
-    color: #fff;
+    color: #ccc;
     opacity: 50%;
     margin-left: 26px; }
   .ai-lession .icon-ai-drop:hover {
@@ -296,10 +463,11 @@ button.btn.btn-primary.btn-login {
 
 .header-sidebar-lession {
   position: relative;
-  background-color: #ccc;
+  background-color: #fff;
   border-radius: 5px;
   margin-bottom: 12px;
-  height: 100px; }
+  height: 80px;
+  box-shadow: 0px 2px 4px #ccc; }
 
 .header-sidebar-lession .content-header-lession {
   font-size: 32px;
@@ -328,7 +496,8 @@ button.btn.btn-primary.btn-login {
   opacity: 70%; }
 
 .bg-color-green {
-  background-color: #02FA72; }
+  background-color: #02FA72;
+  opacity: 60%; }
 
 .bg-color-yelow {
   background: linear-gradient(to bottom, #EFB622 0%, #F3CE6E 50%, #F0AF08 80%, #D19D17 100%); }
@@ -344,64 +513,52 @@ button.btn.btn-primary.btn-login {
 .bg-color-blue-blue {
   background: linear-gradient(to bottom, #34ECE1 0%, #236AF2 20%, #236AF2 80%, #34ECE1 100%); }
 
+.bg-color-redd {
+  background-color: #EF998E; }
+
+.bg-color-silver {
+  background-color: #EFEFEF; }
+
+.color-yelow {
+  color: #FFEC41; }
+
+.color-silver {
+  color: #ccc;
+  opacity: 60%; }
+
+.color-red {
+  color: #F81717; }
+
 .bg-lession {
   width: 380px;
-  height: 62px;
-  border-radius: 10px;
-  margin: 4px auto 12px;
+  height: 65px;
+  margin: 4px auto;
   position: relative; }
-
-.name-lession {
-  font-size: 24px;
-  color: #fff;
-  font-weight: 600;
-  position: absolute;
-  margin-top: 10px;
-  margin-left: 12px; }
-
-.bg-icon-medal {
-  width: 49px;
-  height: 49px;
-  border-radius: 10px;
-  position: absolute;
-  right: 12px;
-  margin-top: 5px; }
-
-.bg-lession .icon-medal {
-  position: absolute;
-  font-size: 35px;
-  right: 19px;
-  color: #FE0000;
-  opacity: 70%;
-  margin-top: 14px; }
-
-.bg-number-icon {
-  height: 17px;
-  width: 38px;
-  position: absolute;
-  right: 12px;
-  margin-top: 35px;
-  border-radius: 100px 0px 50px 0px; }
-
-.icon-number-medal {
-  position: absolute;
-  font-size: 12px;
-  color: #fff;
-  right: 24px;
-  margin-top: 35px; }
-
-.layout-icon-lession {
-  height: 62px;
-  width: 380px;
-  border-radius: 10px;
-  position: absolute; }
-
-.icon-lock {
-  font-size: 28px;
-  color: #fff;
-  opacity: 50%;
-  margin-top: 12px;
-  margin-left: 45%; }
+  .bg-lession .name-lession {
+    font-size: 22px;
+    font-weight: 500;
+    position: relative;
+    padding-top: 5px;
+    padding-left: 30px;
+    margin-bottom: 0px; }
+  .bg-lession .process-lession {
+    margin-top: 3px;
+    margin-left: 34px; }
+    .bg-lession .process-lession .icon-star-lession {
+      margin-right: 2px; }
+  .bg-lession .layout-icon-lession {
+    height: 65px;
+    width: 380px;
+    border-radius: 10px;
+    position: absolute;
+    margin-top: -65px; }
+  .bg-lession .icon-lock {
+    position: absolute;
+    font-size: 28px;
+    color: #ccc;
+    margin-top: -42px;
+    opacity: 80%;
+    margin-left: 45%; }
 
 .header-container-courses {
   margin: 4px 16px 10px 132px;
@@ -633,7 +790,8 @@ button.btn.btn-primary.btn-login {
 
 .title-item-content-list-news {
   font-size: 15px;
-  font-weight: inherit; }
+  font-weight: inherit;
+  overflow: hidden; }
 
 .item-content-list-news div {
   max-width: 430px;
