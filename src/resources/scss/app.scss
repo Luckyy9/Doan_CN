@@ -25,6 +25,10 @@ html{
 
 }
 
+.show{
+    display: block !important;
+}
+
 h1{
     font-size: 18px;
 }
@@ -122,9 +126,7 @@ a{
     background-color: #ddd;
     border-radius: 10px;
 }
-.show{
-    display: block;
-}
+
 #header .icon-bell{
     float: right;
     margin-right: 20px;
@@ -322,6 +324,30 @@ a{
 // Home conntent
 .home-content{
     margin-left: 142px;
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 5px;
+    }
+    
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 5px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background:$shadow-color; 
+        border-radius: 10px;
+    
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: #333;
+    
+    }
 }
 
 // Slogan home
@@ -340,6 +366,9 @@ a{
 .bg-color-violet{
     background: linear-gradient(to bottom right, #6631FF 0%, #A431FF 30%,#FF44F8 70%, #EE89FF 100%)
 }
+.bg-color-red{
+    background-color: radial-gradient( #a9081c 20%, #d05146 60%, #b15a4b 100%)
+}
 .bg-color-blue{
     background: linear-gradient(to bottom left, #236AF2 0%, #34ECE1 40%,#54DEE7 60%, #B6FF7C 90%)
 }
@@ -349,8 +378,12 @@ a{
 .bg-color-pink{
     background: linear-gradient(to top right, #FFEC41 0%, #DE08A2 40%,#FF73AE 80%, #FFCEF1 100%)
 }
-.bg-color-grenn{
+.bg-color-green{
     background: linear-gradient(to bottom, #81FBB8 0%, #28C76F 100%)
+}
+.bg-color-black{
+    background: linear-gradient(to bottom right, #000 0%, #666 100%);
+    opacity : 0.6;
 }
 
 .course-home{
@@ -394,30 +427,7 @@ a{
     border-radius: 20px;
     margin-right: 20px;
   }
-::-webkit-scrollbar {
-    width: 10px;
-    height: 5px;
-}
 
-::-webkit-scrollbar {
-    width: 10px;
-    height: 5px;
-}
-
-::-webkit-scrollbar-track {
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background:$shadow-color; 
-    border-radius: 10px;
-
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #333;
-
-}
 .icon-course{
     position: absolute;
     width: 164px;

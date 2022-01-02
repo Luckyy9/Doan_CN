@@ -1,6 +1,6 @@
 
 class AboutController{
-  about(rep, res){
+  about(req, res){
       
   // get /about
   res.render('about')

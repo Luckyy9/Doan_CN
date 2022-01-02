@@ -67,17 +67,20 @@
    
   </div>
   <div class="list-course-home">
+    {{#each courses}}
+    {{#if this.study}}
     <div class="layout-course">
-      <div class="item-course bg-color-violet ">
+      <div class="item-course {{this.color}} ">
         <div class="icon-course"></div>
-        <i class="fab fa-old-republic icon-course-left"></i>
-        <p class="content-course"> Speak with topic</p>
+        <i class="{{this.icon}} icon-course-left"></i>
+        <p class="content-course"> {{this.titile}}</p>
         <p class="link-course">www.ailearnenglish</p>
       </div>
-      <p class="footer-course">Speaking with topic</p>
-    </div>  
-     
-   <div class="layout-course">
+      <p class="footer-course">{{this.name}}</p>
+    </div> 
+    {{/if}}
+    {{/each}} 
+   {{!-- <div class="layout-course">
       <div class="item-course bg-color-pink">
         <div class="icon-course"></div>
         <i class="fas fa-dice-d20 icon-course-left"></i>
@@ -85,7 +88,7 @@
         <p class="link-course">www.ailearnenglish</p>
       </div>
        <p class="footer-course">Speaking with topic</p>
-    </div>
+    </div> --}}
      
   </div>
   </div>
@@ -98,19 +101,21 @@
    <p class="name-course-home name-new-course-home">New Course</p>
   </div>
   <div class="list-course-home list-new-course-home">
+    {{#each courses}}
     <div class="layout-course layout-news-course">
-      <div class="item-course bg-color-violet ">
+      <div class="item-course {{this.color}} ">
         <div class="icon-course"></div>
-        <i class="fab fa-old-republic icon-course-left"></i>
-        <p class="content-course"> Speak with topic</p>
+        <i class="{{this.icon}} icon-course-left"></i>
+        <p class="content-course"> {{this.titile}}</p>
         <p class="link-course">www.ailearnenglish</p>
       </div>
-      <p class="footer-course">Speaking with topic</p>
-      <i class="fas fa-users icon-users">
-     <p class="member-course-home">123.653 members</p>
-   </i>
-  </div>  
-     <div class="layout-course layout-new-course">
+        <p class="footer-course">{{this.name}}</p>
+        <i class="fas fa-users icon-users">
+      <p class="member-course-home">{{this.member}} members</p>
+    </i>
+    </div>  
+    {{/each}} 
+     {{!-- <div class="layout-course layout-new-course">
       <div class="item-course bg-color-blue">
         <div class="icon-course"></div>
         <i class="fab fa-jedi-order icon-course-left"></i>
@@ -145,7 +150,7 @@
         <i class="fas fa-users icon-users">
         <p class="member-course-home">123.653 members</p>
       </i>
-    </div>
+    </div> --}}
   </div>
   </div>
 

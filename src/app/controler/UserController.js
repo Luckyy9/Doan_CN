@@ -1,6 +1,6 @@
 
 class UserController{
-  user(rep, res){
+  user(req, res){
       
   // get /user
   res.render('user')

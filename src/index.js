@@ -30,7 +30,7 @@ const router=require('./routes')
 db.connect()
 
 app.use(express.static(path.join(__dirname,'public')))
-
+app.use(bodyParser.text());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -73,6 +73,8 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+
+
 
 app.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`)
