@@ -1,10 +1,11 @@
 const homeRouter=require('./home')
-const lessionRouter=require('./lession')
+const adminRouter=require('./admin')
 const coursesRouter=require('./courses')
 const newsRouter=require('./news')
+// const newsmoreRouter=require('./news')
 const aboutRouter=require('./about')
 const userRouter=require('./user')
-
+// const searchRouter=require('./search')
 
 
 function route(app){
@@ -15,9 +16,11 @@ function route(app){
 
     app.use('/news',newsRouter)
 
+    // app.use('/search',homeRouter)
+
     app.use('/courses',coursesRouter)
 
-    app.use('/lession',lessionRouter)
+    app.use('/admin',adminRouter)
     
     app.use('/',homeRouter)
    

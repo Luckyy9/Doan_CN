@@ -8,7 +8,7 @@
     height: 500px;
     width: 800px;
     margin-top: 12px;
-    z-index: 1000;
+    z-index: 1113;
     .bg-start-lession{
         position: absolute;
         height: 500px;
@@ -63,6 +63,8 @@
         font-weight: 700;
         background-color: #04AA6D;
         border: none;
+        outline: none;
+        box-shadow: 1px 6px 4px #EF998E;
         color: #fff;
         border-radius: 10px;
         cursor: pointer;
@@ -72,10 +74,14 @@
         background-color: #46a049;
         border: none;
     }
+    .btn-start-lession:active{
+        box-shadow: 1px 1px 4px #EF998E;
+        transform: translateY(4px);
+    }
     
     
 }
-
+.highlight {background-color: #B4D5FF}
 
 .video-lession{
     position: relative;
@@ -209,8 +215,8 @@
     position: absolute;
     width: 367px;
     height: 64px;
-    bottom: 42px;
-    left: 175px;
+    bottom: 60px;
+    left: 236px;
     border: solid 1px #fff;
     border-radius: 50px;
     box-shadow: 1px 1px 4px #fff;
@@ -222,6 +228,22 @@
         margin-top: 9px;
         margin-left: 25px;
         overflow: auto;
+    }
+    .icon-true{
+        display: none;
+        margin-left: 384px;
+        margin-top: -35px;
+        position: absolute;
+        font-size: 32px;
+        color: #28C76F;
+    }
+    .icon-false{
+        display: none;
+        margin-left: 384px;
+        margin-top: -35px;
+        position: absolute;
+        font-size: 32px;
+        color: #DE341D;
     }
 }
 
@@ -245,7 +267,7 @@
         border-radius: 15px;
     }
     #time-lession-js {
-        width: 10%;
+        width: 1%;
         height: 20px;
         border-radius: 15px;
     } 
@@ -253,9 +275,10 @@
 .voice-lession{
     position: absolute;
     font-size: 40px;
-    bottom: -6px;
-    margin-left: 287px;
+    bottom: -32px;
+    margin-left: 336px;
     text-align: center;
+    z-index: 1112;
     p{
         font-size: 24px;
         color: #808080;
@@ -267,45 +290,134 @@
          color: #a9081c;  
          border-radius: 100px;
          border: 7px solid #808080 ;
-         opacity: 0.4;
+         opacity: 0.6;
     }
     .icon-circle:hover{
         cursor: pointer;
-        opacity: 0.8;
+        opacity: 0.9;
     }
     .icon-voice{
         position: absolute;
         color: #a9081c;
-        opacity: 0.4;
+        opacity: 0.5;
         left: 54px;
         bottom: 46px;
         display: none;
-        animation: flash 1s infinite ;
+        animation: flash 500ms infinite ;
         // infinte thuoc tinh lap vo han
     }
     @keyframes flash{
-        0% {font-size: 40px;}
-        50% {font-size: 50px; opacity: 60%;}
-        100% {font-size: 40px;}
+        0% {font-size: 40px; opacity: 60%;}
+        25% {font-size: 41px; opacity: 70%;}
+        50% {font-size: 42px; opacity: 90%;}
+        75% {font-size: 41px; opacity: 70%;}
+        100% {font-size: 40px; opacity: 60%;}
     }
     .icon-voice:hover{
         cursor: pointer;
         opacity: 80%;
     }
 }
+.next-back-quesion{
+    position: absolute;
+    bottom: 6px;
+    left: 262px;
+    font-size: 36px;
+    
+    z-index: 1111;
+    .icon-next-quesion{
+        position: absolute;
+        display: none;
+        margin-left: 207px;
+        bottom: 8px;
+        opacity: 60%;
+    }
+    .icon-next-quesion:hover{
+        opacity: 1 !important;
+        cursor: pointer;
+    }
+    .icon-back-quesion{
+        display: none;
+        opacity: 40%;
+        margin-left: 40px;
+        bottom: 8px ;
+        position: absolute
+    }
+    .icon-back-quesion:hover{
+        opacity: 1 !important;
+        cursor: pointer;
+    }
+}
+.good{
+    animation: confetti 3s ease-in infinite;
+}
+@keyframes confetti {
+    0% {
+       opacity:0;
+       transform:translateY(0%) rotate(0deg);
+    }
+    10% {
+       opacity:1;
+    }
+    35% {
+       transform:translateY(-800%) rotate(270deg);
+    }
+    80% {
+       opacity:1;
+    }
+    100% {
+       opacity:0;
+       transform:translateY(2000%) rotate(1440deg);
+    }
+ }
+ 
+
 .volume-lession{
     .icon-volume{
     position: absolute;
-    bottom: 206px;
-    color: #808080;
+    bottom: 201px;
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    font-size: 30px;
+    color: #DEB7B8;
+    background: linear-gradient(90deg, rgba(240, 95, 87, 0.8) 31.13%, rgba(54, 9, 64, 0.8) 100%);
     left: 297px;
-    font-size: 28px;
-    opacity: 70%;
+    box-shadow: 1px 5px 2px #DEB7B8;
+    border: none;
+    outline: none;
+    backdrop-filter: blur(4px);
     z-index: 2;
     }
     .icon-volume:hover{
         cursor: pointer;
-        opacity: 1;
+        
+    }
+    .icon-volume:active{
+        box-shadow: 1px 1px 4px #DEB7B8;
+        transform: translateY(4px);
+    }
+    .icon-turtle{
+        width: 45px;
+        color: #DEB7B8;
+        position: absolute;
+        left: 372px;
+        bottom: 201px;
+        border: none;
+        height: 45px;
+        background: linear-gradient(90deg, rgba(240, 95, 87, 0.8) 31.13%, rgba(54, 9, 64, 0.8) 100%);
+        border-radius: 10px;
+        outline: none;
+        box-shadow: 1px 5px 2px #DEB7B8;
+        backdrop-filter: blur(4px);
+        z-index: 2;
+    }
+    .icon-turtle:hover{
+        cursor: pointer;
+    }
+    .icon-turtle:active{
+        box-shadow: 1px 1px 4px #DEB7B8;
+        transform: translateY(4px);
     }
 }
 
@@ -359,6 +471,7 @@
     }
 }
 .layout-quesion{
+    display: none;
     position: absolute;
     top: 110px;
     left: 278px;
@@ -377,9 +490,11 @@
         margin-top: -99px;
         position: absolute;
         margin-left: 26px;
+        
     }
 
 }
+
 .line-lession{
     width: 630px;
     position: absolute;
@@ -440,14 +555,15 @@
             box-shadow: 2px 2px 7px #666;
             .avatar-ai-lession{
                 width: 69px;
+                height: 69px;
                 border-radius: 10px;
             }
             .co-ai-lession{
-                width: 30px;
-                margin-top: -48px;
-                margin-left: 38px;
+                width: 36px;
+                margin-top: -52px;
+                margin-left: 32px;
                 border-radius: 0px 0px 5px 0px;
-                opacity: 0.7;
+                opacity: 0.9;
             }
         }
     }
@@ -571,4 +687,4 @@
         margin-left: 45%;
     }
 }
-
+//pokemon

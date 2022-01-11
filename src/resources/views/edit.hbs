@@ -1,0 +1,30 @@
+<div class="container-admin-create container">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="/admin">Admin <span style= color:#F18121>Learning English<span style= color:#2C7ABE>Easy</span></a>
+    </div>
+    <h2 style="font-size: 21px;font-weight:700;color:#F81717">Chỉnh sửa khóa học</h2>
+    <div id="container-create-admin " class="form-create-course">
+        <form class="row g-3" method="POST" action="/admin/edit/{{course._id}}?_method=PUT">
+            <div class="col-md-6">
+                <label for="name" class="form-label">Tên khóa học</label>
+                <input type="text"  class="form-control"value="{{course.name}}" id="name" name="name">
+            </div>
+            <div class="col-md-6">
+                <label for="type" class="form-label">Loại</label>
+                <input  type="text" class="form-control"value="{{course.type}}" id="type" name="type">
+            </div>
+            <div class="col-12">
+                <label for="titile" class="form-label">Cấp độ</label>
+                <input type="text" class="form-control"value="{{course.titile}}" id="titile" name="titile">
+            </div>
+            <div class="col-12">
+                <label for="information" class="form-label">Thông tin</label>
+                <textarea  class="form-control" id="information" name="information">{{course.information}}</textarea>
+            </div>
+           
+            <div class="col-12 mt-4 ">
+                <button type="submit" class="btn btn-primary">Lưu khóa học</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,291 @@
+<div class="container-admin container">
+      <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top header-admin" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/admin">Admin <span style= color:#F18121>Learning English<span style= color:#2C7ABE>Easy</span></a>
+            </div>
+
+            <div class="navbar-default sidebar " role="navigation">
+                <div class="sidebar-nav navbar-collapse menu-admin">
+                    <button class="tablink btn-tablink-admin" onclick="openPage('course-admin-js','courses-admin-js')"id="courses-admin-js">Danh sách khóa học</button>
+                    <button class="tablink btn-tablink-admin" onclick="openPage('lession-admin-js','lessions-admin-js')" id="lessions-admin-js">Các bài học</button>
+                    <button class="tablink btn-tablink-admin" onclick="openPage('quesion-admin-js','quesions-admin-js') "id="quesions-admin-js">Các câu hỏi</button>
+                    <button class="tablink btn-tablink-admin" onclick="openPage('news-admin-js','newss-admin-js')" id="newss-admin-js">Các bài viết</button>
+                            
+                </div> 
+                
+            </div>
+          
+        </nav>
+                    
+        {{!-- layout course --}}
+        <div id="course-admin-js" class="course-admin tabcontent-admin">
+            <div id="page-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header">Khóa học
+                                <small>Danh sách</small>
+                                <a href="/admin/create"><button id="btn-add-course-admin" class="add-course-admin">Thêm khóa học</button></a>
+                                
+                            </h1>
+                        </div>
+                        <!-- /.col-lg-12 -->
+                        <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                            <thead>
+                                <tr align="center">
+                                    <th>Tên khóa học</th>
+                                    <th>Cấp độ khóa học</th>
+                                    <th>Loại khóa học</th>
+                                    <th>Thông tin khóa học</th>
+                                    <th>Số người tham gia</th>
+                                    <th>Sửa </th>
+                                    <th>Xóa</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each course}}
+                                <tr class="odd gradeX" align="center">
+                                    <td>{{this.name}}</td>
+                                    <td>{{this.titile}}</td>
+                                    <td>{{this.type}} </td>
+                                    <td>{{this.information}}</td>
+                                    <td>{{this.member}}</td>
+                                    <td class="center"><a href="/admin/{{this._id}}/edit"><i class="fas fa-pencil-alt"></i> </a></td>
+                                    <td class="center"><a  href="" data-toggle="modal"data-id="{{this._id}}" data-target="#deleteModal"><i class="fas fa-trash-alt"></i></a></td>
+                                                                      
+                                </tr>
+                                {{else}}
+                                <tr>
+                                    <td colspan="6" class="text-center"> Không có khóa học nào!</td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+        </div>
+        {{!-- end layout course --}}
+
+        {{!-- layout lession --}}
+
+        <div id="lession-admin-js" class="lession-admin tabcontent-admin">
+            <div id="page-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header">Bài học
+                                <small>Danh sách</small>
+                                <a href="/admin/create"><button id="btn-add-course-admin" class="add-course-admin">Thêm bài học</button></a>
+                            </h1>
+                        </div>
+                        <!-- /.col-lg-12 -->
+                        <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                            <thead>
+                                <tr align="center">
+                                    <th>Tên bài học</th>
+                                    <th>Số lượng câu hỏi</th>
+                                    <th>Loại bài học</th>
+                                    <th>Sửa </th>
+                                    <th>Xóa</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each lession}}
+                                <tr class="odd gradeX" align="center">
+                                    <td>{{this.name}}</td>
+                                    <td>{{this.start}}</td>
+                                    <td>{{this.id_course}} </td>
+                                    <td class="center"><a href="/admin/{{this._id}}/edit"><i class="fas fa-pencil-alt"></i> </a></td>
+                                    <td class="center"><a data-toggle="modal"data-id="{{this._id}}" data-target="#deleteModal" href=""><i class="fas fa-trash-alt"></i></a></td>
+                                                                      
+                                </tr>
+                                {{else}}
+                                <tr>
+                                    <td colspan="6"class="text-center"> Không có bài học nào!</td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+        
+        </div>
+        {{!-- end layout lession --}}
+
+        {{!--  layout quesion --}}
+        <div id="quesion-admin-js" class="quesion-admin tabcontent-admin">
+           
+            <div id="page-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header">Câu hỏi
+                                <small>Danh sách</small>
+                                <a href="/admin/create"><button id="btn-add-course-admin" class="add-course-admin">Thêm câu hỏi</button></a>
+                            </h1>
+                        </div>
+                        <!-- /.col-lg-12 -->
+                        <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                            <thead>
+                                <tr align="center">
+                                    <th>Thứ tự</th>
+                                    <th>Câu hỏi</th>
+                                    <th>Câu trả lời</th>
+                                    <th>Cấp độ câu hỏi</th>
+                                    <th>Hình ảnh</th>
+                                    <th>Xóa </th>
+                                    <th>Sửa</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each quesion}}
+                                <tr class="odd gradeX" align="center">
+                                    <td>{{this.number}}</td>
+                                    <td>{{this.quesion}}</td>
+                                    <td>{{this.answer}}</td>
+                                    <td>{{this.id_course}}</td>
+                                    <td>{{this.img}}</td>
+                                    <td class="center"><a href="/admin/{{this._id}}/edit"><i class="fas fa-pencil-alt"></i> </a></td>
+                                    <td class="center"><a data-toggle="modal"data-id="{{this._id}}" data-target="#deleteModal" href=""><i class="fas fa-trash-alt"></i></a></td>
+                                                                    
+                                </tr>
+                                {{else}}
+                                <tr>
+                                    <td colspan="6"class="text-center"> Không có câu hỏi nào!</td>
+                                </tr>
+                                 {{/each}} 
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+        
+        </div>
+        {{!-- end layout quesion --}}
+        {{!--  layout news --}}
+
+        <div id="news-admin-js" class="new-admin tabcontent-admin">
+           
+            <div id="page-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header">Bài viết
+                                <small>Danh sách</small>
+                                <a href="/admin/create"><button id="btn-add-course-admin" class="add-course-admin">Thêm bài viết</button></a>
+                                
+                            </h1>
+                        </div>
+                        <!-- /.col-lg-12 -->
+                        <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                            <thead>
+                                <tr align="center">
+                                    <th>Tên tin tức</th>
+                                    <th>Nội dung</th>
+                                    <th>Hình ảnh</th>
+                                    <th>Xóa </th>
+                                    <th>Sửa</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each news}}
+                                <tr class="odd gradeX" align="center">
+                                    <td>{{this.name}}</td>
+                                    <td style="max-height: 72px; overflow: hidden;">{{this.description}}</td>
+                                    <td>{{this.image}}</td>
+                                    <td class="center"><a href="/admin/{{this._id}}/edit"><i class="fas fa-pencil-alt"></i> </a></td>
+                                    <td class="center"><a data-toggle="modal" data-id="{{this._id}}" data-target="#deleteModal" href=""><i class="fas fa-trash-alt"></i></a></td>
+                                                                      
+                                </tr>
+                                {{else}}
+                                <tr>
+                                    <td colspan="6"class="text-center"> Không có bài viết nào!</td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+        
+        </div>
+        {{!-- end layout news --}}
+
+        {{!-- comfirm delete --}}
+       <div id="deleteModal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Xoá khóa học</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn có chắc chắn muốn xóa học !.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btn-delete-course" class="btn btn-danger" data-dismiss="modal">Xóa</button>
+                    <button type="button" class="btn btn-secondary"data-dismiss="modal">Hủy</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        {{!-- delete form --}}
+        <form name="deleteform" method="POST" ></form>
+        <!-- /#page-wrapper -->
+</div>
+ 
+<script>
+    var idcourse;
+    var deleteform= document.forms['deleteform'];
+    var deletecourse= document.getElementById('btn-delete-course');
+
+    function openPage(pageName,btnName) {
+    var i, tabcontent, tablinks;
+    tablinks = document.getElementsByClassName("btn-tablink-admin");
+    tabcontent = document.getElementsByClassName("tabcontent-admin");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+        tablinks[i].style.backgroundColor="#FBFBFB";
+        tablinks[i].style.color="#F81717";
+
+    }
+    
+    document.getElementById(btnName).style.backgroundColor="#F81717";
+    document.getElementById(btnName).style.color="#FBFBFB"
+    document.getElementById(pageName).style.display = "block";
+    
+    }
+    document.getElementById("courses-admin-js").click();
+    document.addEventListener('DOMContentLoaded', function(){
+        $('#deleteModal').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget) 
+                idcourse = button.data('id') 
+                console.log(idcourse)
+            })
+    })
+   
+    deletecourse.onclick= function(){
+        deleteform.action='/admin/delete/'+idcourse+'?_method=DELETE';
+        deleteform.submit();
+    }
+    
+</script>
