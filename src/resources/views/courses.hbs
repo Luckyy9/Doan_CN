@@ -74,7 +74,8 @@
    <p class="name-course-home name-new-course-home">New Course</p>
   </div>
   <div class="row">
-      {{#each courses}}
+      {{#each coursesnew}}
+        {{!-- {{#if this.study}} --}}
       <div class="col-sm-6 col-lg-4">
         <div class="layout-course layout-new-course mg-courses">
         <div class="item-course {{this.color}}">
@@ -86,6 +87,7 @@
         <p class="footer-course">{{this.name}}</p>
         </div>
       </div>
+        {{!-- {{/if}} --}}
       {{/each}}
       {{!-- <div class="col-sm-6 col-lg-4">
             <div class="layout-course layout-new-course mg-courses">
@@ -123,21 +125,27 @@
    <p class="name-course-home name-new-course-home">Toiec Course</p>
   </div>
   <div class="row">
-      {{#each courses}}
+      {{#each courses as | course Idcourse|}}
+     
+        {{#iffArray course.type "toiec"}}
       <div class="col-sm-6 col-lg-4">
         <div class="layout-course layout-new-course mg-courses">
-        <div class="item-course {{this.color}}">
-            <div class="icon-course"></div>
-            <i class="{{this.icon}} icon-course-left"></i>
-            <p class="content-course"> {{this.titile}}</p>
-            <p class="link-course">www.ailearnenglish</p>
-        </div>
-        <p class="footer-course">{{this.name}}</p>
+        <a href="/courses/{{course._id}}/{{course.slug}}">
+          <div class="item-course {{course.color}}">
+              <div class="icon-course"></div>
+              <i class="{{course.icon}} icon-course-left"></i>
+              <p class="content-course"> {{course.titile}}</p>
+              <p class="link-course">www.ailearnenglish</p>
+          </div>
+        </a>
+        <p class="footer-course">{{course.name}}</p>
           <i class="fas fa-users icon-users">
-           <p class="member-course-home">{{this.member}} members</p>
+           <p class="member-course-home">{{course.member}} members</p>
           </i>
         </div>
       </div>
+        {{/iffArray}}
+        
       {{/each}}
       {{!-- <div class="col-sm-6 col-lg-4">
             <div class="layout-course layout-new-course mg-courses">
@@ -210,7 +218,8 @@
    <p class="name-course-home name-new-course-home">ILETS Course</p>
   </div>
   <div class="row">
-       {{#each courses_toeic}}
+       {{#each courses}}
+        {{#iffArray this.type "ilets"}}
       <div class="col-sm-6 col-lg-4">
         <div class="layout-course layout-new-course mg-courses">
         <div class="item-course {{this.color}}">
@@ -225,6 +234,7 @@
           </i>
         </div>
       </div>
+       {{/iffArray}}
       {{/each}}
       {{!-- <div class="col-sm-6 col-lg-4">
             <div class="layout-course layout-new-course mg-courses">
@@ -310,10 +320,5 @@
 
 <script>
 
- Handlebars.registerHelper('Iftype', function(v1, v2, options) {
-  if(v1 === v2) {
-    return options.courses(this);
-  }
-  return null;
-});
+
 </script>

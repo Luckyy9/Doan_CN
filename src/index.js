@@ -11,7 +11,7 @@ const flash = require('connect-flash')
 const csrf = require('csurf')
 const csrfProtection = csrf()
 const bcrypt = require('bcryptjs')
-
+const methodOverride = require('method-override')
 
 
 const { dirname } = require('path')
@@ -41,9 +41,20 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(morgan('combined'))
-
+app.use(methodOverride('_method'))
 app.engine('hbs',handlebars({
-  extname: '.hbs'
+  extname: '.hbs',
+  helpers:{
+    iffArray(arg1, arg2, options) {
+      return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+    }, 
+    forr(n, block) {
+        var accum = '';
+        for(var i = 0; i < n; ++i)
+            accum += block.fn(i);
+        return accum;
+    },
+  }
 }))
 app.set('view engine','hbs')
 

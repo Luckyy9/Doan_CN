@@ -4,7 +4,9 @@ const mongoose = require('mongoose');
 
     try{
         await mongoose.connect('mongodb://localhost:27017/Doan_cn');
-    
+            useNewUrlParser: true;
+            useUnifiedTopology:true;
+            useCreateIndex:true;
      console.log('Connet Ok!')
     }
     catch(error){

@@ -1,0 +1,76 @@
+.container-admin{
+    position: relative;
+    margin-top:66px;
+    display: flex;
+    .header-admin{
+        display: block;
+        .menu-admin{
+            display: flex;
+            margin-top: 12px;
+            margin-left: 1px;
+            
+            .btn-tablink-admin{
+                font-size: 18px;
+                font-weight: 550;
+                opacity: 80%;
+                color: #F81717;
+                width: 182px;
+                height: 42px;
+                border: none;
+                outline: none;
+                background-color: #FBFBFB;
+                box-shadow: 1px 4px 4px #ccc;
+                
+            }
+            .btn-tablink-admin:hover{
+                cursor: pointer;
+                opacity: 1;
+            }
+            .btn-tablink-admin:active{
+                box-shadow: 1px -1px 6px #ccc;
+                transform: translateY(-3px);
+
+            }
+        }
+    }
+    .tabcontent-admin{
+        margin-left: 16px;
+        display: none;
+        .add-course-admin{
+            font-size: 16px;
+            font-weight: 550;
+            opacity: 80%;
+            width: 130px;
+            height: 40px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            background-color: #55B77E;
+            color: #FBFBFB;
+            margin-left: 560px;
+            box-shadow: 1px 4px 4px #ccc;
+        }
+        .add-course-admin:hover{
+            cursor: pointer;
+            opacity: 1;
+        }
+        .add-course-admin:active{
+            box-shadow: 1px 1px 4px #ccc;
+            transform: translateY(4px);
+
+        }
+    }
+    
+    
+}
+.container-admin-create{
+    position: relative;
+    margin-top:66px;
+    .form-create-course{
+        margin-top: 32px;
+        label{
+            font-size: 18px;
+            font-weight: 550;
+        }
+    }
+}

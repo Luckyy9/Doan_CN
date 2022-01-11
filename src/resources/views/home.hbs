@@ -52,7 +52,7 @@
 <div class="home-content">
 {{!-- Slogan home --}}
 <div class="slogan-home">
-  <p class="name-slogan-home">Welcome to learn English with AI</p>
+  <p class="name-slogan-home">{{user.name}}</p>
   <div class="content-slogan-home">Learn english speaking with assistant Luck, learn reading skill and writting skill easy . Study every day every where.You can find all English test: Toiec, IELTS, ... </div>
 </div>
 
@@ -70,13 +70,17 @@
     {{#each courses}}
     {{#if this.study}}
     <div class="layout-course">
+      <a href="/courses/{{this._id}}/{{this.slug}}">
       <div class="item-course {{this.color}} ">
         <div class="icon-course"></div>
         <i class="{{this.icon}} icon-course-left"></i>
         <p class="content-course"> {{this.titile}}</p>
         <p class="link-course">www.ailearnenglish</p>
       </div>
+      </a>
+      <a href="/courses/{{this._id}}/{{this.slug}}">
       <p class="footer-course">{{this.name}}</p>
+      </a>
     </div> 
     {{/if}}
     {{/each}} 

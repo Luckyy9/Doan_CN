@@ -4,11 +4,16 @@ const csrf = require('csurf');
 const passport = require('passport');
 const csrfProtection = csrf();
 router.use(csrfProtection);
-
+const User = require("../../src/app/models/User");
 const homeController= require('../app/controler/HomeController')
 
 router.get('/home', isLoggedIn, function (req, res, next) {
-    res.render('home');
+    // User.findById({})
+    //       .then(user =>res.render('home', {
+    //         lession: mutipleMongooseToObject(lession),
+    //       }))
+    //       .catch(next);
+    res.render('home')
 });
 
 router.get('/logout', isLoggedIn, function (req, res, next) {

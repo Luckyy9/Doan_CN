@@ -16,12 +16,16 @@
            <div class="bg-start-lession"></div>
            <h1 class="content-start-lession">Chào mừng đến với khóa học nói tiếng anh của chúng tôi </h1> 
            <h2 class="slogan-lession">Bắt đầu học thôi</h2>
+           {{!-- <a href="/{{this.id_lession}}"> --}}
            <button onclick="StartLession()" class="btn-start-lession btn-start-lession-js">Start</button>
+           {{!-- </a> --}}
       </div>
 
 {{!-- Video --}}
      <div class="video-lession">
-
+     {{!-- bird --}}
+         
+     {{!-- end bird --}}
          <div class="bg-video-lession" > 
             <div class="svg-animation-lession">
              <svg width="492" height="899" viewBox="0 0 492 899" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -16790,41 +16794,70 @@
             </div>
          </div>
 
-        <div class="layout-quesion">
+        <div class="layout-quesion show " id="quesion1">
             <div class="bg-layout-quesion bg-color-blue"></div>
-            <span id="content-quesion-js"class="content-quesion">How are you ? </span>
-            <span id="check-answer-js" style="display: none;">I'm fine</span>
+            <p id="content-quesion1-js"class="content-quesion">{{quesion.[0].quesion}}</p>
+            <p id="check-answer1-js" style="display:none">{{quesion.[0].answer}}</p>
         </div>
-
+        <div class="layout-quesion " id="quesion2">
+            <div class="bg-layout-quesion bg-color-blue"></div>
+            <p id="content-quesion2-js"class="content-quesion">{{quesion.[1].quesion}}</p>
+            <p id="check-answer2-js" style="display:none">{{quesion.[1].answer}}</p>
+        </div>
+         <div class="layout-quesion " id="quesion3">
+            <div class="bg-layout-quesion bg-color-blue"></div>
+            <p id="content-quesion3-js"class="content-quesion">{{quesion.[2].quesion}}</p>
+            <p id="check-answer3-js" style="display:none">{{quesion.[2].answer}}</p>
+        </div>
+         <div class="layout-quesion " id="quesion4">
+            <div class="bg-layout-quesion bg-color-blue"></div>
+            <p id="content-quesion4-js"class="content-quesion">{{quesion.[3].quesion}}</p>
+            <p id="check-answer4-js" style="display:none">{{quesion.[3].answer}}</p>
+        </div>
+         <div class="layout-quesion " id="quesion5">
+            <div class="bg-layout-quesion bg-color-blue"></div>
+            <p id="content-quesion5-js"class="content-quesion">{{quesion.[4].quesion}}</p>
+            <p id="check-answer5-js" style="display:none">{{quesion.[4].answer}}</p>
+        </div>
+     
         <div class="line-lession">
             <div class="line bg-color-green"></div>
             <i class="fas fa-chevron-left icon-left-lession"></i>
-            <p class="number-quesion">1 / 10</p>
+            <p id="number-quesion-js"class="number-quesion">1 / 5</p>
             <i class="fas fa-chevron-right icon-right-lession"></i>
             <div class="line bg-color-green"></div>
         </div>
         <div  class="content-voice bg-color-black" id="bg-content-voice-js">
              <p id="content-answer-js" class="content-voice-answer" >Speak your answer...</p>
+             <i id="icon-true-js"class="fas fa-check icon-true"></i>
+             <i id="icon-false-js"class="fas fa-times icon-false"></i>
 
         </div>
 
          <div class="time-answer">
              <img src="http://localhost:3000/img/watch.png" alt="">
-             <p class="time-number-lession">You have 60s for answer</p>
+             <p class="time-number-lession"id="number-time-js">You have 100s for answer</p>
              <div id="bg-time-lession-js">
                  <div id="time-lession-js" class="bg-color-green"></div>
              </div>
+             
          </div>
 
          <div class="voice-lession">
              <i onclick="Speak(),listen()" class="fas fa-circle icon-circle " id="icon-circle-js"></i>
-             <i onclick="StopSpeak()" class="fas fa-microphone icon-voice " id="icon-voice-js"></i>
+             <i onclick="StopSpeak(),CheckAnswer()" class="fas fa-microphone icon-voice " id="icon-voice-js"></i>
              <p>Tap to speak</p>
          </div>
 
+         <div class="next-back-quesion">
+              <i onclick="BackQuesion()" class="fas fa-backward icon-back-quesion "id="btn-back-quesion-js"></i>
+              <i onclick="NextQuesion()" class="fas fa-forward icon-next-quesion"id="btn-next-quesion-js"></i>
+              
+         </div>
+
          <div class="volume-lession">
-             <i onclick="SpeakAgain()"class="fas fa-volume-up icon-volume" id="icon-volume-js"></i>
-              <i onclick="SpeakEnd()"class="fas fa-volume-up icon-volume" id="icon-volume-off-js" style="display: none; color:blue"></i>
+             <button onclick="SpeakAgain()"class="fas fa-volume-up icon-volume" id="icon-volume-js"></button>
+             <span onclick="SpeakSlow()" class="iconify icon-turtle" data-icon="mdi:turtle" style="color: #deb7b8;" data-width="24" data-height="24" data-rotate="90deg"></span>
          </div>
 
          <div class="setting-lession">
@@ -16834,13 +16867,13 @@
                          <p id="number-volume-js">0</p>
                     </div>
                  <div class="slidecontainer">
-                    <input type="range" min="1" max="100" value="50"id="volume-setting-modal-js">
+                    <input type="range" min="0" max="10" value="5"id="volume-setting-modal-js">
                  </div>   
                     <div class="title-setting-modal">Tốc độ: 
                          <p id="number-speed-js">0</p>
                     </div>
                  <div class="slidecontainer">
-                    <input type="range" min="1" max="10" value="5"id="speed-setting-modal-js">
+                    <input type="range" min="0" max="10" value="5"id="speed-setting-modal-js">
                  </div> 
              </div>
          </div>
@@ -16848,21 +16881,21 @@
          <div class="ai-lession">
              <i onclick="OpenModalAi()" class="fas fa-chevron-circle-down icon-ai-drop"></i>
              <div class="ai-modal-lession" id="modal-ai-js">
-                 <div onclick="OpenNewAIUsm()" class="item-ai-modal-lession active-ai">
-                     <img src="http://localhost:3000/img/ai1.jpg" alt="AI" class="avatar-ai-lession">
-                     <img src="http://localhost:3000/img/vn.png" alt="AI" class="co-ai-lession">
+                 <div onclick="OpenNewAIUsm()"id="say-uk-female-js" class="item-ai-modal-lession active-ai">
+                     <img src="http://localhost:3000/img/AI_UK_female.jpg" alt="AI" class="avatar-ai-lession">
+                     <img src="http://localhost:3000/img/UK.png" alt="AI" class="co-ai-lession">
                  </div>
-                 <div onclick="OpenNewAIUk()" class="item-ai-modal-lession">
-                     <img src="http://localhost:3000/img/ai1.jpg" alt="AI" class="avatar-ai-lession">
-                     <img src="http://localhost:3000/img/vn.png" alt="AI" class="co-ai-lession">
+                 <div onclick="OpenNewAIUk()"id="say-uk-male-js" class="item-ai-modal-lession">
+                     <img src="http://localhost:3000/img/AI_UK_male.png" alt="AI" class="avatar-ai-lession">
+                     <img src="http://localhost:3000/img/UK.png" alt="AI" class="co-ai-lession">
                  </div>
-                 <div onclick="OpenNewAIUsg()" class="item-ai-modal-lession">
-                     <img src="http://localhost:3000/img/ai1.jpg" alt="AI" class="avatar-ai-lession">
-                     <img src="http://localhost:3000/img/vn.png" alt="AI" class="co-ai-lession">
+                 <div onclick="OpenNewAIUsg()"id="say-us-male-js" class="item-ai-modal-lession">
+                     <img src="http://localhost:3000/img/AI_US.jpg" alt="AI" class="avatar-ai-lession">
+                     <img src="http://localhost:3000/img/US.png" alt="AI" class="co-ai-lession">
                  </div>
-                 <div onclick="OpenNewAICn()" class="item-ai-modal-lession">
-                     <img src="http://localhost:3000/img/ai1.jpg" alt="AI" class="avatar-ai-lession">
-                     <img src="http://localhost:3000/img/vn.png" alt="AI" class="co-ai-lession">
+                 <div onclick="OpenNewAICn()"id="say-us-female-js" class="item-ai-modal-lession">
+                     <img src="http://localhost:3000/img/AI_CN.jpg" alt="AI" class="avatar-ai-lession">
+                     <img src="http://localhost:3000/img/CN.png" alt="AI" class="co-ai-lession">
                  </div>
              </div>
         
@@ -16883,20 +16916,56 @@
         <div class="header-sidebar-lession">
             <div class="bg-sidebar-lession bg-color-green"></div>
             <p class="content-header-lession">Toeic Lession</p>
-            <p class="title-lession">Hoàn thành 1/10 số bài học (10%)</p>
+            <p class="title-lession">Hoàn thành 1/7 số bài học (10%)</p>
 
         </div>
+     
         <div class="content-sidebar-lession ">
-            <div class="bg-lession bg-color-redd">
-                <p class="name-lession">Lession 1: Family</p>
+             {{#each lession}}
+                {{#if this.active}}
+                    <div class="bg-lession bg-color-redd">
+                         <p class="name-lession">{{this.name}}</p>
+                         <div class="process-lession">
+                              {{!-- {{#forr this.start}} --}}
+                                        <i class="fas fa-star icon-star-lession color-red"></i> 
+                                        <i id="start2"class="fas fa-star icon-star-lession color-silver"></i>  
+                                        <i id="start3"class="fas fa-star icon-star-lession color-silver"></i>
+                                        <i id="start4"class="fas fa-star icon-star-lession color-silver"></i>
+                                        <i id="start5"class="fas fa-star icon-star-lession color-silver"></i>
+                              {{!-- {{/forr}} --}}
+                         </div>    
+                    </div>
+                {{else}}
+                    <div class="bg-lession bg-color-silver">
+                         <p class="name-lession">{{this.name}}</p>
+                         <div class="process-lession">
+                              <i class="fas fa-star icon-star-lession color-silver"></i>
+                              <i class="fas fa-star icon-star-lession color-silver"></i>
+                              <i class="fas fa-star icon-star-lession color-silver"></i>
+                              <i class="fas fa-star icon-star-lession color-silver"></i>
+                              <i class="fas fa-star icon-star-lession color-silver"></i>
+                         </div> 
+                         <div class="layout-icon-lession bg-color-white-50">
+                         </div>
+                         <i class="fas fa-lock icon-lock"></i>
+                    </div>
+               {{/if}}
+            {{/each}}
+         
+             {{!-- <div class="bg-lession bg-color-silver">
+                <p class="name-lession">Lession 2: School</p>
                 <div class="process-lession">
-                    <i class="fas fa-star icon-star-lession color-red"></i>
                     <i class="fas fa-star icon-star-lession color-silver"></i>
                     <i class="fas fa-star icon-star-lession color-silver"></i>
                     <i class="fas fa-star icon-star-lession color-silver"></i>
                     <i class="fas fa-star icon-star-lession color-silver"></i>
-                </div>    
+                    <i class="fas fa-star icon-star-lession color-silver"></i>
+                </div> 
+                <div class="layout-icon-lession bg-color-white-50">
+                </div>
+                 <i class="fas fa-lock icon-lock"></i>
             </div>
+           
              <div class="bg-lession bg-color-silver">
                 <p class="name-lession">Lession 2: School</p>
                 <div class="process-lession">
@@ -16948,20 +17017,7 @@
                 <div class="layout-icon-lession bg-color-white-50">
                 </div>
                  <i class="fas fa-lock icon-lock"></i>
-            </div>
-             <div class="bg-lession bg-color-silver">
-                <p class="name-lession">Lession 2: School</p>
-                <div class="process-lession">
-                    <i class="fas fa-star icon-star-lession color-silver"></i>
-                    <i class="fas fa-star icon-star-lession color-silver"></i>
-                    <i class="fas fa-star icon-star-lession color-silver"></i>
-                    <i class="fas fa-star icon-star-lession color-silver"></i>
-                    <i class="fas fa-star icon-star-lession color-silver"></i>
-                </div> 
-                <div class="layout-icon-lession bg-color-white-50">
-                </div>
-                 <i class="fas fa-lock icon-lock"></i>
-            </div>
+            </div> --}}
         </div>
     </div>
  </div>   
@@ -16993,41 +17049,247 @@
     var recognition = new webkitSpeechRecognition();
     var startlession= document.querySelector('.start-lession-js');
     //var checkanswer= document.querySelector('#check-answer-js');
-    var Correctanswer= document.querySelector('#check-answer-js');
-    var Youranswer= document.querySelector('#content-answer-js');
+    var contentquesion= document.getElementById('content-quesion1-js');
+    //var Correctanswer=document.getElementById('check-answer1-js').innerHTML;
+    //var Youranswer=document.getElementById('content-answer-js').innerHTML;
+    var headsvg= document.getElementById('head');
+    var armleftsvg= document.getElementById('arm-left');
+    var armrightsvg= document.getElementById('arm-right');
+    var bodysvg=document.getElementById('gun');
+    var nvsvg= document.getElementById('nv-doan');
+    var eyesvg= document.getElementById('Rectangle\ 114');
+    var eyesvg2= document.getElementById('Rectangle\ 113');
+    var eyesvg3= document.getElementById('Rectangle\ 116');
+    var elemtime = document.getElementById("time-lession-js");
+    var numbertime =document.getElementById("number-time-js");
+    var backquesion= document.getElementById("btn-back-quesion-js");
+    var nextquesion= document.getElementById("btn-next-quesion-js");
+    var layoutquesion1= document.getElementById("quesion1");
+    var layoutquesion2= document.getElementById("quesion2");
+    var layoutquesion3= document.getElementById("quesion3");
+    var layoutquesion4= document.getElementById("quesion4");
+    var layoutquesion5= document.getElementById("quesion5");
+    var nextbtn= document.getElementById("btn-next-quesion-js")
+    var Correctanswer= document.getElementById("check-answer1-js").innerHTML;
+    var answer=document.getElementById("content-answer-js").innerHTML;
+    var numberquesion= document.getElementById("number-quesion-js").innerHTML
+    
+    
+    var clicks =0;
+
     recognition.continuous = true;
     recognition.interimResults = true;
+    recognition.lang ='en-US, zh-CN';
     let timestart;
+    
+    function NextQuesion(){
+         clicks++;
+         console.log(clicks);
+         if(clicks==1){
+          SpeakAgain= function(){
+               
+               say($("#content-quesion2-js").text())
+          }
+          SpeakSlow= function(){
+        
+               responsiveVoice.speak($("#content-quesion2-js").text(), "UK English Female", {rate:0.5});
 
+          }
+          var numberquesion= document.getElementById("number-quesion-js").innerHTML="2 / 5";
+          console.log(numberquesion)
+          contentquesion.style.display='block';
+          layoutquesion1.classList.remove("show");
+          layoutquesion2.classList.add("show");
+          contentanswer.style.display='none';
+          Correctanswer= document.getElementById("check-answer2-js").innerHTML;
+          say('Now, listen to the next question');
+          say($("#content-quesion2-js").text());
+          document.getElementById("start2").classList.remove("color-silver");
+          document.getElementById("start2").classList.add("color-red");
+          document.getElementById("btn-back-quesion-js").style.display="none";  
+          document.getElementById("btn-next-quesion-js").style.display="none";
+         }
+         if(clicks==2){
+          SpeakAgain= function(){
+               
+               say($("#content-quesion3-js").text())
+          }
+          SpeakSlow= function(){
+        
+               responsiveVoice.speak($("#content-quesion3-js").text(), "UK English Female", {rate:0.5});
+
+          }
+          var numberquesion= document.getElementById("number-quesion-js").innerHTML="3 / 5";
+          console.log(numberquesion)
+          contentquesion.style.display='block';
+          layoutquesion2.classList.remove("show");
+          contentanswer.style.display='none';
+          layoutquesion3.classList.add("show");
+          Correctanswer= document.getElementById("check-answer3-js").innerHTML;
+          say('Now, listen to the next question');
+          say($("#content-quesion3-js").text());
+          document.getElementById("start3").classList.remove("color-silver");
+          document.getElementById("start3").classList.add("color-red");
+          document.getElementById("btn-next-quesion-js").style.display="none";
+          document.getElementById("btn-back-quesion-js").style.display="none";  
+
+         }
+         if(clicks==3){
+          SpeakAgain= function(){
+               
+               say($("#content-quesion4-js").text())
+          }
+          SpeakSlow= function(){
+        
+               responsiveVoice.speak($("#content-quesion4-js").text(), "UK English Female", {rate:0.5});
+
+          }
+          var numberquesion= document.getElementById("number-quesion-js").innerHTML="4 / 5";
+          console.log(numberquesion)
+          contentquesion.style.display='block';
+          layoutquesion3.classList.remove("show");
+          contentanswer.style.display='none';
+          layoutquesion4.classList.add("show");
+          Correctanswer= document.getElementById("check-answer4-js").innerHTML;
+          say('Now, listen to the next question');
+          say($("#content-quesion4-js").text());
+          document.getElementById("start4").classList.remove("color-silver");
+          document.getElementById("start4").classList.add("color-red");
+          document.getElementById("btn-next-quesion-js").style.display="none";
+          document.getElementById("btn-back-quesion-js").style.display="none";  
+         }
+         if(clicks==4){
+          SpeakAgain= function(){
+               
+               say($("#content-quesion5-js").text())
+          }
+          SpeakSlow= function(){
+        
+               responsiveVoice.speak($("#content-quesion5-js").text(), "UK English Female", {rate:0.5});
+
+          }
+          var numberquesion= document.getElementById("number-quesion-js").innerHTML="5 / 5";
+          console.log(numberquesion)
+          contentquesion.style.display='block';
+          layoutquesion4.classList.remove("show");
+          contentanswer.style.display='none';
+          layoutquesion5.classList.add("show");
+          Correctanswer= document.getElementById("check-answer5-js").innerHTML;
+          say('Now, listen to the last question');
+          say($("#content-quesion5-js").text());
+          document.getElementById("start5").classList.remove("color-silver");
+          document.getElementById("start5").classList.add("color-red");
+          document.getElementById("btn-next-quesion-js").style.display="none";
+          document.getElementById("btn-back-quesion-js").style.display="none";  
+         }
+         if(clicks==5){
+          //var numberquesion= document.getElementById("number-quesion-js").innerHTML="5 / 5";
+          //console.log(numberquesion)
+          //layoutquesion4.classList.remove("show");
+          //contentanswer.style.display='none';
+          //layoutquesion5.classList.add("show");
+          //Correctanswer= document.getElementById("check-answer5-js").innerHTML;
+          //responsiveVoice.speak('Now, listen to the next question');
+          //say($("#content-quesion5-js").text());
+          //document.getElementById("start5").classList.remove("color-silver");
+          //document.getElementById("start5").classList.add("color-red");
+          //document.getElementById("btn-next-quesion-js").style.display="none";  
+         }
+    }
+    function BackQuesion(){
+         //layoutquesion2.classList.remove("show");
+         //layoutquesion1.classList.add("show");
+         
+         //Correctanswer= document.getElementById("check-answer1-js").innerHTML;
+         //responsiveVoice.speak('Now, listen to the question');
+         //say($("#content-quesion1-js").text());
+    }
+
+    window.onload = function() {
+         setTimeout(say('Welcome to my website. My name Navi. Come learn English with me too!'),900);   
+     }
+     function runtime() {
+        
+          var width = 2;
+          var id = setInterval(frame, 600);
+          function frame() {
+               if (width >= 100) {
+               clearInterval(id);
+               
+               } else {
+               width++;
+               elemtime.style.width = width + "%";
+               numbertime.innerHTML ="Thời gian của bạn là " + width  + " S";
+               }
+               
+          }
+     
+     }
     function StartLession(){
          startlession.style.display="none";
-         timestart= setTimeout(sayquestion,5000)
+         timestart= setTimeout(sayquestion,2000);
+         //nvsvg.classList.add("body-updown");
+         
     }
     function Speak(){
+        
         endspeak.style.display="block";
         speak.style.opacity="0";
         contentanswer.style.display="block";
         recognition.start();
-        
+        runtime();
+        //armleftsvg.classList.toggle("arm-left-listen"); 
+        //eyesvg3.classList.add("eyes-listen");
+
        
     }
+    function OpenNewAIUsm(){
+          say= function(text){
+          responsiveVoice.speak(text, "UK English Female");
+          }
+          say("Hello, My name Navi, I'm from England");
+        
+    }
+    function OpenNewAIUk(){
+          say= function(text){
+               responsiveVoice.speak(text, "UK English Male");
+          }
+          say("Hello, My name Luck, Nice to meet you");
+    }   
+    function OpenNewAIUsg(){
+          say= function(text){
+               responsiveVoice.speak(text, "US English Female");
+          }
+          say("Hi, My name Lili, I'm from USA");
+    }  
+    function OpenNewAICn(){
+          say= function(text){
+               responsiveVoice.speak(text, "Chinese Female");
+             }
+          say("Hallo, My name Zhy,I'm from China");
+    } 
     function say(text) {
-	responsiveVoice.speak(text, "UK English Female")
-     }
+     
+     responsiveVoice.speak(text, "UK English Female");
+
+    }
+
     function sayquestion(){
-         responsiveVoice.speak('Now, listen to the question');
-          say($("#content-quesion-js").text());
+         contentquesion.style.display='block';
+          say('Now, listen to the question');
+          say($("#content-quesion1-js").text());
+          
+          
     }
 
      function listen() {
          
-          
-          recognition.onresult = function(event) { 
-     if (event.results.length > 0) {
-          for (let i = event.resultIndex; i < event.results.length; ++i){
-          $("#content-answer-js").text(event.results[i][0].transcript)
-          }
-     }
+     recognition.onresult = function(event) { 
+          if (event.results.length > 0) {
+               for (let i = event.resultIndex; i < event.results.length; ++i){
+               $("#content-answer-js").text(event.results[i][0].transcript)
+               }
+          } 
           }
           recognition.onend = function(event) {
               // say($("#content-answer-js").text())
@@ -17036,16 +17298,34 @@
      }
 
      function CheckAnswer(){
-          var a=Correctanswer.value;
-          var b=Youranswer.value;
-          var ans= a.localeCompare(b);
+          var Correctanswer= document.getElementById('check-answer1-js').innerHTML;
+          var Correctanswer2= document.getElementById('check-answer2-js').innerHTML;
+          var Correctanswer3= document.getElementById('check-answer3-js').innerHTML;
+          var Correctanswer4= document.getElementById('check-answer4-js').innerHTML;
+          var Correctanswer5= document.getElementById('check-answer5-js').innerHTML;
+         
+          var answer=document.getElementById('content-answer-js').innerHTML;
+          var Youranswer=answer.charAt(0).toUpperCase() + answer.slice(1);
           
-          if(ans==0){
-               responsiveVoice.speak('That right!');
+
+          if(Correctanswer.includes(Youranswer)|| Correctanswer2.includes(Youranswer)
+               || Correctanswer3.includes(Youranswer)|| Correctanswer4.includes(Youranswer)
+               || Correctanswer5.includes(Youranswer)){
+               say('That right!');
+               
+               document.getElementById("icon-true-js").style.display="block";
+               document.getElementById("icon-false-js").style.display="none";
+               document.getElementById("btn-next-quesion-js").style.display="block";
+               document.getElementById("btn-back-quesion-js").style.display="block";
           }
           else{
-               responsiveVoice.speak('No, you can answer again');
+               document.getElementById("icon-true-js").style.display="none";
+               document.getElementById("icon-false-js").style.display="block";
+               say('No, you can answer again');
+               
           }
+
+          
           
      }
     function StopSpeak(){
@@ -17054,11 +17334,19 @@
         //contentanswer.style.display="none";
         recognition.stop();
         CheckAnswer();
+       
+        //armleftsvg.classList.remove("arm-left-listen"); 
+        //eyesvg3.classList.remove("eyes-listen");
+        //headsvg.classList.add("head-ok")
     }
     function SpeakAgain(){
-        speakoff.style.display="block";
-        speakagain.style.display="none"
-        say($("#content-quesion-js").text())
+        
+        say($("#content-quesion1-js").text())
+    }
+    function SpeakSlow(){
+        
+        responsiveVoice.speak($("#content-quesion1-js").text(), "UK English Female", {rate:0.5});
+
     }
     function SpeakEnd(){
         speakoff.style.display="none";
@@ -17097,19 +17385,7 @@
         }
       }
     }
-    function OpenNewAIUsm(){
-
-       videoai.src = "http://localhost:3000/img//videodoan.mp4";
-    }
-    function OpenNewAIUk(){
-     
-       videoai.src = "http://localhost:3000/img//videodoan1.mp4";
-    }   
-    function OpenNewAIUsg(){
-      
-    }  
-    function OpenNewAICn(){
-      
-    }       
+   
+          
    
 </script>
