@@ -4,8 +4,12 @@ const csrf = require('csurf');
 const passport = require('passport');
 const csrfProtection = csrf();
 router.use(csrfProtection);
-const User = require("../../src/app/models/User");
-const homeController= require('../app/controler/HomeController')
+
+const Course = require("../app/models/Course");
+const {mutipleMongooseToObject} = require("../util/mongoose")
+
+const homeController= require('../app/controler/HomeController');
+const { courses } = require('../app/controler/CoursesController');
 
 router.get('/home', isLoggedIn, function (req, res, next) {
     // User.findById({})
@@ -15,6 +19,20 @@ router.get('/home', isLoggedIn, function (req, res, next) {
     //       .catch(next);
     res.render('home')
 });
+router.get('/search', function (req, res,next){
+    const name = req.query.type;
+    const slug = req.query.type;
+    const type = req.query.type;
+    
+    Promise.all([ Course.find({name:{$regex: name,$options: '$i'}}),
+                Course.find({slug:{$regex: slug,$options: '$i'}}),
+                Course.find({type:{$regex: type,$options: '$i'}})])
+        .then(([search ])=> res.render('search', {
+            search: mutipleMongooseToObject(search)
+        })
+    )
+    .catch(next);
+})
 
 router.get('/logout', isLoggedIn, function (req, res, next) {
     req.logout();
@@ -25,7 +43,6 @@ router.use('/login', notLoggedIn, function(req, res, next) {
   next();
   
 });
-
 
 router.get('/register', function (req, res, next) {
     var messages = req.flash('error');
@@ -69,7 +86,6 @@ function(req, res) {
 
 router.get('/',homeController.home)
  
-
 
 module.exports=router;
 

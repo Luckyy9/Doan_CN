@@ -27,7 +27,7 @@
 }
 .item-mission-about div{
     max-height: 170px;
-    overflow: scroll;
+    // overflow: scroll;
     margin: auto;
 }
 .item-mission-about h3,
@@ -40,9 +40,10 @@
 .item-mission-about h4,
 .item-mission-about-center h4,
 .content-method-about{
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 450;
-    margin: 0px 0px 2px 8px
+    margin: 0px 0px 2px 8px;
+    line-height: 1.5;
 }
 .item-mission-about-center{
     position: relative;

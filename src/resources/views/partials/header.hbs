@@ -2,10 +2,12 @@
 <div id="header" class="myheader">
        <a href="/">
        <img src='http://localhost:3000/img/logo_web.png' alt="logo" class="img-logo">
-       <a href="/" class="header-slogan">Learn English easy</a></a>
+       <a href="/" class="header-slogan"><span style= color:#F18121>Learning English</span> <span style= color:#2C7ABE>Easy</span></a></a>
        <div class="header-search">
-           <i class="fas fa-search icon-search"></i>
-           <input type="text" id="search" name='helo' placeholder="Tìm kiếm ...">
+          <form method="GET" action="/search">
+           <button style="outline: 0;" type="submit" class="search-icon"> <span style="outline: 0;"></span><i class="fas fa-search fa-2x" style="color: #F2C09B;"></i></button>
+           <input type="text" name='type' id="search-input"  placeholder="Tìm kiếm" required>
+           </form>
        </div> 
           <i onclick="Mylogin()" class="fas fa-user-circle icon-user"></i>
             <div id="subnavlogin" class="subnav-login" >

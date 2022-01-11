@@ -4,9 +4,11 @@
 @import 'lession';
 @import 'courses';
 @import 'news';
+@import 'newsmore';
 @import 'about';
 @import 'user';
 @import 'admin';
+
 
 *{
     padding: 0;
@@ -69,7 +71,7 @@ a{
 }
 
 #header .img-logo{
-    width: 65px;
+    width: 60px;
     height: 65px;
     margin-left: 16px;
 }
@@ -92,14 +94,16 @@ a{
     opacity: 0.6;
     outline: none;
 }
-#header .icon-search{
+.search-icon {
+    width: 2.8em;
+    height: 2.6em;
+    cursor: pointer;
     position: absolute;
-    font-weight: bold;
-    opacity: 0.6;
-    margin-top: 10px;
-    margin-left: 20px;
-    font-size: 20px;
-}
+    left: 0em;
+    outline: 0;
+    background: none;
+    border: 0;
+}   
 .icon-user{
     float: right;
     margin-right: 32px;
@@ -181,7 +185,10 @@ a{
     margin-top: 4px;
     font-size: 20px;
     font-weight: 500;
+
 }
+.sidebar-left a:hover{
+    color: orangered;}
 
 // sidebar-home responsive
 
@@ -464,14 +471,14 @@ a{
 .list-news-home .layout-news{
     display: flex;
     margin-top: 12px;
-    max-width: 280px;
+    max-width: 260px;
 }
 .img-news-home{
-    width: 280px;
-    height: 130px;
+    width: 260px;
+    height: 140px;
     border-radius: 20px;
     position: relative;
-    margin-right: 20px;
+    margin-right: 25px;
 }
 .title-news-home{
     margin: 5px 0px 2px 5px;
@@ -483,7 +490,8 @@ a{
     position: relative;
     margin: 0px 0px 8px 5px;
     font-size: 14px;
-    font-weight: lighter
+    font-weight: lighter;
+    width: 260px;
 }
 .footer-news-home{
     position: relative;

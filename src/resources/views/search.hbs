@@ -1,0 +1,40 @@
+<div id="nav-search"> 
+    <div class="sidebar-left ">
+        <a href="/"><i class="fas fa-home icon-home"></i>Home</a>
+        <a href="courses"><i class="fas fa-graduation-cap icon-learn"></i>Courses</a>
+        <a href="news"><i class="fas fa-newspaper icon-news"></i>News</a>
+        <a href="about"><i class="fas fa-info-circle icon-about"></i>About</a>
+    </div>
+    <div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div class="container-courses">
+    <div class="course-home new-course-home  course-courses mgl-132">
+        <div class="header-course-home header-new-course-home">
+            <p style="padding-top: 20px;font-weight: 500;" class="name-course-home name-new-course-home">Kết quả tìm kiếm</p><hr>
+        </div>
+        <div class="row">
+            {{#each search}}
+            <div class="col-sm-6 col-lg-4">
+                <div class="layout-course layout-new-course mg-courses">
+                    <div class="item-course {{this.color}}">
+                        <div class="icon-course"></div>
+                        <i class="{{this.icon}} icon-course-left"></i>
+                        <p class="content-course"> {{this.titile}}</p>
+                        <p class="link-course">www.ailearnenglish</p>
+                    </div>
+                    <p class="footer-course">{{this.name}}</p>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+      
+
+
+
+
+

@@ -9,8 +9,7 @@ class HomeController{
         courses: mutipleMongooseToObject(courses),
       }))
       .catch(next);
-      
- }
+    }
 //  Course.find({study: true})
 //  .then(courses =>res.render('home', {
 //    courses_study: mutipleMongooseToObject(courses)
