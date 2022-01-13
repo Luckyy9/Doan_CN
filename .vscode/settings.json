@@ -1,3 +1,9 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/54ef63ac-94a9-459c-8c62-4deaa8dadc49/resourceGroups/DPT_doan/providers/Microsoft.Web/sites/doanchuyennganh",
+    "appService.deploySubpath": "."
 }
