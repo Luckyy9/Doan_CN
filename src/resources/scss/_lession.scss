@@ -120,12 +120,12 @@
             transform-box: fill-box;
             
         }
-        #Rectangle\ 114,#Rectangle\ 113{
+        // #Rectangle\ 114,#Rectangle\ 113{
             
-        }
-        #Rectangle\ 116{
+        // }
+        // #Rectangle\ 116{
            
-        }
+        // }
         
     }
 }
@@ -208,9 +208,9 @@
 //     // 100%{transform: matrix(1.5, 0, 0, -1, 27, 38);}
 
 // }
-.layout-ai{
+// .layout-ai{
    
-}
+// }
 .content-voice{
     position: absolute;
     width: 367px;
@@ -524,6 +524,24 @@
         right: 236px;
         opacity: 40%;
     }
+
+}
+.runtime{
+    animation: time 30s ;
+}
+@keyframes time{
+    0%{width: 1%;}
+    10%{width: 10%;}
+    20%{width: 20%;}
+    30%{width: 30%;}
+    40%{width: 40%;}
+    50%{width: 50%;}
+    60%{width: 60%;}
+    70%{width: 70%;}
+    80%{width: 80%;}
+    90%{width: 90%;}
+    100%{width: 100%;}
+
 
 }
 .ai-lession{

@@ -58,5 +58,24 @@ class AdminController{
     .then(()=> res.redirect('back'))
     .catch(next);
     }
+
+    trash(req, res,next){
+      Promise.all([ Course.findDeleted({}),Lession.find({}),Quesion.find({}),News.find({})])
+      .then(([course,lession, quesion, news])=>
+      res.render('trash', {
+        course: mutipleMongooseToObject(course),
+        lession: mutipleMongooseToObject(lession),
+        quesion:mutipleMongooseToObject(quesion),
+        news:mutipleMongooseToObject(news),
+        })
+      )
+      .catch(next); 
+  }
+
+    restore(req, res, next){
+      Course.restore({_id:req.params.id})
+      .then(()=> res.redirect('back'))
+      .catch(next);
+    }
 } 
 module.exports= new AdminController;

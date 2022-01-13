@@ -78,13 +78,14 @@
         {{!-- {{#if this.study}} --}}
       <div class="col-sm-6 col-lg-4">
         <div class="layout-course layout-new-course mg-courses">
+        <a href="/courses/{{this._id}}/{{this.slug}}">
         <div class="item-course {{this.color}}">
             <div class="icon-course"></div>
             <i class="{{this.icon}} icon-course-left"></i>
             <p class="content-course"> {{this.titile}}</p>
             <p class="link-course">www.ailearnenglish</p>
         </div>
-        <p class="footer-course">{{this.name}}</p>
+        <p class="footer-course">{{this.name}}</p></a>
         </div>
       </div>
         {{!-- {{/if}} --}}
@@ -222,13 +223,14 @@
         {{#iffArray this.type "ilets"}}
       <div class="col-sm-6 col-lg-4">
         <div class="layout-course layout-new-course mg-courses">
+        <a href="/courses/{{this._id}}/{{this.slug}}">
         <div class="item-course {{this.color}}">
             <div class="icon-course"></div>
             <i class="{{this.icon}} icon-course-left"></i>
             <p class="content-course"> {{this.titile}}</p>
             <p class="link-course">www.ailearnenglish</p>
         </div>
-        <p class="footer-course">{{this.name}}</p>
+        <p class="footer-course">{{this.name}}</p></a>
           <i class="fas fa-users icon-users">
            <p class="member-course-home">{{this.member}} members</p>
           </i>

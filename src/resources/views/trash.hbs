@@ -9,10 +9,10 @@
 
             <div class="navbar-default sidebar " role="navigation">
                 <div class="sidebar-nav navbar-collapse menu-admin">
-                    <button class="tablink btn-tablink-admin" onclick="openPage('course-admin-js','courses-admin-js')"id="courses-admin-js">Danh sách khóa học</button>
-                    <button class="tablink btn-tablink-admin" onclick="openPage('lession-admin-js','lessions-admin-js')" id="lessions-admin-js">Các bài học</button>
-                    <button class="tablink btn-tablink-admin" onclick="openPage('quesion-admin-js','quesions-admin-js') "id="quesions-admin-js">Các câu hỏi</button>
-                    <button class="tablink btn-tablink-admin" onclick="openPage('news-admin-js','newss-admin-js')" id="newss-admin-js">Các bài viết</button>
+                    <button class="tablink btn-tablink-admin" onclick="openPage('course-admin-js','courses-admin-js')"id="courses-admin-js">Khóa học đã xóa</button>
+                    <button class="tablink btn-tablink-admin" onclick="openPage('lession-admin-js','lessions-admin-js')" id="lessions-admin-js">Bài học đã xóa</button>
+                    <button class="tablink btn-tablink-admin" onclick="openPage('quesion-admin-js','quesions-admin-js') "id="quesions-admin-js">Câu hỏi đã xóa</button>
+                    <button class="tablink btn-tablink-admin" onclick="openPage('news-admin-js','newss-admin-js')" id="newss-admin-js">Bài viết đã xóa</button>
                             
                 </div> 
                 
@@ -29,7 +29,8 @@
                             <h1 class="page-header">Khóa học
                                 <small>Danh sách</small>
                                 <a href="/admin/create"><button id="btn-add-course-admin" class="add-course-admin">Thêm khóa học</button></a>
-                                <a href="/admin/trash" class="icon-trash-restore"><i style="color: #2C7ABE;" class="fas fa-trash-restore-alt "></i> (1)</a>
+                               
+                                
                             </h1>
                         </div>
                         <!-- /.col-lg-12 -->
@@ -41,8 +42,8 @@
                                     <th>Loại khóa học</th>
                                     <th>Thông tin khóa học</th>
                                     <th>Số người tham gia</th>
-                                    <th>Sửa </th>
-                                    <th>Xóa</th>
+                                    <th>Khôi phục </th>
+                                    
                                     
                                 </tr>
                             </thead>
@@ -54,13 +55,12 @@
                                     <td>{{this.type}} </td>
                                     <td>{{this.information}}</td>
                                     <td>{{this.member}}</td>
-                                    <td class="center"><a href="/admin/{{this._id}}/edit"><i class="fas fa-pencil-alt"></i> </a></td>
-                                    <td class="center"><a  href="" data-toggle="modal"data-id="{{this._id}}" data-target="#deleteModal"><i class="fas fa-trash-alt"></i></a></td>
+                                    <td class="center"><a href="" class="btn-restore-js" data-id="{{this._id}}"><i class="fas fa-reply-all "></i> </a></td>   
                                                                       
                                 </tr>
                                 {{else}}
                                 <tr>
-                                    <td colspan="6" class="text-center"> Không có khóa học nào!</td>
+                                    <td colspan="6" class="text-center"> Không có khóa học nào trong thùng rác !</td>
                                 </tr>
                                 {{/each}}
                             </tbody>
@@ -229,7 +229,7 @@
         {{!-- end layout news --}}
 
         {{!-- comfirm delete --}}
-       <div id="deleteModal" class="modal" tabindex="-1">
+       {{!-- <div id="deleteModal" class="modal" tabindex="-1">
         <div class="modal-dialog">
                 <div class="modal-content">
                 <div class="modal-header">
@@ -238,26 +238,25 @@
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <p>Bạn có chắc chắn muốn xóa học !.</p>
-                </div>
+                
                 <div class="modal-footer">
                     <button type="button" id="btn-delete-course" class="btn btn-danger" data-dismiss="modal">Xóa</button>
                     <button type="button" class="btn btn-secondary"data-dismiss="modal">Hủy</button>
                 </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         {{!-- delete form --}}
         <form name="deleteform" method="POST" ></form>
+        <form name="restoreform" method="POST" ></form>
         <!-- /#page-wrapper -->
 </div>
  
-<script>
-    var idcourse;
-    var deleteform= document.forms['deleteform'];
-    var deletecourse= document.getElementById('btn-delete-course');
 
+<script>
+
+  
+    
     function openPage(pageName,btnName) {
     var i, tabcontent, tablinks;
     tablinks = document.getElementsByClassName("btn-tablink-admin");
@@ -275,17 +274,33 @@
     
     }
     document.getElementById("courses-admin-js").click();
+
     document.addEventListener('DOMContentLoaded', function(){
+            var idcourse;
+            var deleteform= document.forms['deleteform'];
+            var deletecourse= document.getElementById('btn-delete-course');
+           
+            var restoreform= document.forms['restoreform'];
+            
+            var btnrestore= $('.btn-restore-js')
         $('#deleteModal').on('show.bs.modal', function (event) {
+               
                 var button = $(event.relatedTarget) 
-                idcourse = button.data('id') 
+               idcourse = button.data('id') 
                 console.log(idcourse)
+               
             })
+        
+        btnrestore.click( function(e){
+            e.preventDefault();
+            var idCourse= $(this).data('id');
+            restoreform.action='/admin/restore/'+idCourse+'?_method=PATCH';
+            restoreform.submit();
+            console.log()
+        })
     })
    
-    deletecourse.onclick= function(){
-        deleteform.action='/admin/delete/'+idcourse+'?_method=DELETE';
-        deleteform.submit();
-    }
+    
+   
     
 </script>

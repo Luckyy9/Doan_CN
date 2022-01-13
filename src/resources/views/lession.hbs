@@ -16836,7 +16836,7 @@
 
          <div class="time-answer">
              <img src="http://localhost:3000/img/watch.png" alt="">
-             <p class="time-number-lession"id="number-time-js">You have 100s for answer</p>
+             <p class="time-number-lession"id="number-time-js">You have 30s for answer</p>
              <div id="bg-time-lession-js">
                  <div id="time-lession-js" class="bg-color-green"></div>
              </div>
@@ -17213,7 +17213,8 @@
           var width = 2;
           var id = setInterval(frame, 600);
           function frame() {
-               if (width >= 100) {
+               if (endspeak.addEventListener) {
+                    console.log(endspeak.addEventListener)
                clearInterval(id);
                
                } else {
@@ -17225,6 +17226,7 @@
           }
      
      }
+    
     function StartLession(){
          startlession.style.display="none";
          timestart= setTimeout(sayquestion,2000);
@@ -17237,7 +17239,7 @@
         speak.style.opacity="0";
         contentanswer.style.display="block";
         recognition.start();
-        runtime();
+        elemtime.classList.add("runtime");
         //armleftsvg.classList.toggle("arm-left-listen"); 
         //eyesvg3.classList.add("eyes-listen");
 
@@ -17333,6 +17335,7 @@
         speak.style.opacity="0.4";
         //contentanswer.style.display="none";
         recognition.stop();
+        elemtime.classList.remove("runtime");
         CheckAnswer();
        
         //armleftsvg.classList.remove("arm-left-listen"); 
