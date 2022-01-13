@@ -10,9 +10,10 @@ class AdminController{
   admin(req, res,next){
       
   // get /admin
-  Promise.all([ Course.find({}),Lession.find({}),Quesion.find({}),News.find({})])
-      .then(([course,lession, quesion, news])=>
+  Promise.all([ Course.find({}), Course.countDocumentsDeleted(),Lession.find({}),Quesion.find({}),News.find({})])
+      .then(([course,coursedelete,lession, quesion, news])=>
       res.render('admin', {
+        coursedelete,
         course: mutipleMongooseToObject(course),
         lession: mutipleMongooseToObject(lession),
         quesion:mutipleMongooseToObject(quesion),
